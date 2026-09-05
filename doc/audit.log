@@ -1,0 +1,25 @@
+# Audit Log: World Building Project (Urban Fantasy Bestiary)
+
+[2026-09-05T17:41:51+09:00] PROJECT_INIT
+- Description: プロジェクト立ち上げ（現代社会×魔法融合世界の図鑑プロジェクト）
+- Core Files Initialized: AGENTS.md, GEMINI.md, TEMPLATE.md
+- Concepts: 1982年マナ復活, シャドウラン, メイドインアビス, ファンタスティックビースト, クトゥルフ神話
+
+[2026-09-05T17:41:56+09:00] ANALYSIS_AND_REVIEW
+- Action: 世界観構築における5大矛盾・不整合ポイントの抽出
+- Items:
+  1. 進化速度と歴史の矛盾（1982年〜現代の40余年スケール）
+  2. 科学インフラ vs 魔法・マナの物理的干渉
+  3. 現代兵器（銃火器・ミサイル） vs 魔獣の力関係
+  4. 日常（都市生活）と非日常（魔境・深淵）の境界線・法制度
+  5. 食・素材利用・バイオハザード（調理・解体・生殖の倫理とリスク）
+
+[2026-09-05T17:43:55+09:00] DOC_DIRECTORY_SETUP
+- Action: doc/ フォルダ作成およびステータス・ログ・Q&A管理ファイルの整備
+  - doc/audit.log (本ファイル)
+  - doc/current_status.md
+  - doc/questions_and_answers.md
+
+[2026-09-05T17:46:42+09:00] GEMINI_MD_CREATION
+- Action: GEMINI.md 作成（AI生成ルール、齟齬確認プロトコル、3〜5択式質問＋自由回答ルール、ガードレール策定）
+
