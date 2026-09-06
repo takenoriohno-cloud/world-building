@@ -1,41 +1,15 @@
-# Audit Log: World Building Project (Urban Fantasy Bestiary)
+# プロジェクト監査・変更履歴ログ (Audit Log)
 
-[2026-09-05T17:41:51+09:00] PROJECT_INIT
-- Description: プロジェクト立ち上げ（現代社会×魔法融合世界の図鑑プロジェクト）
-- Core Files Initialized: AGENTS.md, GEMINI.md, TEMPLATE.md
-- Concepts: 1982年マナ復活, シャドウラン, メイドインアビス, ファンタスティックビースト, クトゥルフ神話
+## [2026-09-06] 魔導科学設定資料の完全復元・統合
+- **変更内容**:
+  - `world/magic_theory.md`: 「第3章 障壁力学・物理突破メカニズム（重火器・対戦車ミサイル突破）」「第4章 テクノマジック（電脳魔術）・魔法付与（エンチャント）の現状と限界」を完全復元し、4大体系分類およびガープスマジック基準出力限界と統合。
+- **監査結果**: 憲章（AGENTS.md）の「軍事バランス」「完全並行・テクノマジック黎明期」の記述と100%合致・整合性を担保。
 
-[2026-09-05T17:41:56+09:00] ANALYSIS_AND_REVIEW
-- Action: 世界観構築における5大矛盾・不整合ポイントの抽出
-- Items:
-  1. 進化速度と歴史の矛盾（1982年〜現代の40余年スケール）
-  2. 科学インフラ vs 魔法・マナの物理的干渉
-  3. 現代兵器（銃火器・ミサイル） vs 魔獣の力関係
-  4. 日常（都市生活）と非日常（魔境・深淵）の境界線・法制度
-  5. 食・素材利用・バイオハザード（調理・解体・生殖の倫理とリスク）
+## [2026-09-06] 世界地理・世界歴史の包括保持、日本のメガコーポ・メタヒューマン史の完全統合
+- `world/geography.md`, `world/history.md`, `doc/questions_and_answers.md` の更新。
 
-[2026-09-05T17:43:55+09:00] DOC_DIRECTORY_SETUP
-- Action: doc/ フォルダ作成およびステータス・ログ・Q&A管理ファイルの整備
-  - doc/audit.log (本ファイル)
-  - doc/current_status.md
-  - doc/questions_and_answers.md
+## [2026-09-06] 魔術4大分類・ガープス基準および東京防護圏地理の反映、Crag Boar更新
+- `creatures/001_crag_boar.md`, `doc/questions_and_answers.md` の更新。
 
-[2026-09-05T17:46:42+09:00] GEMINI_MD_CREATION
-- Action: GEMINI.md 作成（AI生成ルール、齟齬確認プロトコル、3〜5択式質問＋自由回答ルール、ガードレール策定）
-
-[2026-09-05T18:04:57+09:00] QA_DECISION_Q1_Q2
-- Action: Q1（出現ルーツ・時間軸）および Q2（科学インフラ・社会背景）の基本方針決定
-  - Q1: ハイブリッド（急速変異・古代覚醒・異界流入の共存。人間にも変異発生）
-  - Q2: 完全並行ベース（電磁気と非干渉、テクノマジック黎明期、電子機器操作魔術の研究、新人類への弾圧・人体実験等の社会暗部設定）
-
-[2026-09-05T21:46:00+09:00] GROUNDING_RULE_AND_FIRST_CREATURE_DRAFT
-- Action: GEMINI.md に「1.2 外部調査・現実科学グラウンディング義務化ルール」を策定
-- Action: 現実の生物学（イノシシ生態・解剖学・E型肝炎）、弾道学（5.56mm/7.62mm/12Gスラッグ）、ジビエ衛生基準をWeb検索によりグラウンディング
-- Action: 図鑑第1号エントリー「剛毛巌猪（クラッグ・ボア / Sus scrofa petramorphus）」を TEMPLATE.md に完全準拠して執筆（creatures/001_crag_boar.md）
-
-
-
-
-
-
-
+## [2026-09-05] 初代憲章・基盤設定・Crag Boar初期ドラフト策定
+- AGENTS.md, GEMINI.md, TEMPLATE.md, 001_crag_boar.md 初期作成。
