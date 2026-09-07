@@ -62,6 +62,31 @@
   - `creatures/001_crag_boar.md` 向けに、学術図鑑（フィールドガイド標本）スタイルの剛毛巌猪（クラニアル・シールド、シリカ結晶剛毛、奥多摩山岳魔境背景）画像を生成。
   - プロジェクト内 `assets/images/001_crag_boar.jpg` に保存し、[creatures/001_crag_boar.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/creatures/001_crag_boar.md) に埋め込み完了。
 
+### 4. 【合意・採択完了】ガープスマジック魔法大全一覧取得アーキテクチャの確定と火霊系の取得開始
+- **ユーザー指示・回答**: `Q: A` 採択。火霊系の対象URL受領（`https://seesaawiki.jp/mokugyo/d/%b2%d0%ce%ee%b7%cf%bc%f6%ca%b8`）。
+- **採択方針**: 
+  - **選択肢A（系統別Markdown分割＋総インデックス構成）**を正式採用。
+  - `world/magic/index.md`（総インデックス・全体前提ツリー）および `world/magic/spells/<系統名>.md` による段階的バッチ取得・完全データ保持を実施。
+- **ステータス**: 火霊系呪文データの取得・構築作業を開始。
+
+### 5. 火霊系呪文データ（ref_raw.html）の読み込みと魔術アーカイブ構築
+- **ユーザー提供**: ダウンロード済みHTMLファイル `ref_raw.html`（GURPSよろず 火霊系呪文データ）。
+- **対応・反映**:
+  - `ref_raw.html` からガープス第4版『魔法大全』の火霊系基本呪文32種、および各種サプリメント（Artillery Spells, Death Spells, The Least of Spells, Pyramid等）の追加呪文12種、計44種の完全データを抽出・解析。
+  - `world/magic/spells/fire.md` に前提条件ツリー（Mermaid図）、呪文クラス、エネルギー消費、準備時間、出力・効果概要、現代魔獣・軍事適用例を網羅して新規構築。
+  - `world/magic/index.md`（魔導科学総合インデックス・四大精霊および他系統一覧）を新規構築。
+- **ステータス**: 火霊系呪文アーカイブの整備完了。
+
+### 6. 剛毛巌猪（Crag Boar）の野生生態写真（ドキュメンタリー風）の生成と図鑑反映
+- **ユーザー指示**: Crag Boar の生態を撮影したようなリアルな画風（生活の一瞬を切り取ったドキュメンタリー写真）の画像を生成・配置すること。
+- **対応・反映**:
+  - 奥多摩の原生林・泥土・鉱物土壌での採餌シーン、クラニアル・シールド、反り返った牙、シリカ結晶混じりの剛毛、望遠レンズ被写界深度のリアルな野生ドキュメンタリー写真プロンプトを設計・生成。
+  - プロジェクト内 `assets/images/001_crag_boar_wildlife.jpg` として保存・配置。
+  - `creatures/001_crag_boar.md` に【野生生態写真 / Field Wildlife Documentary Photo】として埋め込み完了。
+- **ステータス**: 反映完了。
+
+
+
 ---
 
 ## 【対話・初期策定ログ 2026-09-05】

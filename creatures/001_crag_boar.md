@@ -17,7 +17,13 @@
 ```
 【図鑑外観標本 / Field Specimen Illustration】
 ```
-![剛毛巌猪の生態図解](../assets/images/001_crag_boar.jpg)
+![剛毛巌猪の標本図解](../assets/images/001_crag_boar.jpg)
+
+```
+【野生生態写真 / Field Wildlife Documentary Photo】
+奥多摩山岳魔境区（第2アウトランド）の原生林において、鉱物混じりの泥土を掘り起こして採餌を行う成熟した雄個体。鼻骨のクラニアル・シールドと背部に生える結晶化シリカ剛毛、湿潤な樹林の光景が記録されている。
+```
+![剛毛巌猪の野生生態写真](../assets/images/001_crag_boar_wildlife.jpg)
 
 ---
 
