@@ -1,0 +1,8 @@
+# Raw HTML and references
+ref_raw/
+ref_raw.html
+
+# Scratch files and temporary parsing logs
+scratch/
+scratch_*.txt
+*.ps1.tmp

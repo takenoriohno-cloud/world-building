@@ -6,22 +6,31 @@
 
 ---
 
-## 1. 呪文系統別アーカイブ一覧
+## 1. 魔法基礎ルール・用語集 (Foundational Rules & Glossary)
+
+| ファイル | 内容概要 | リンク |
+| :--- | :--- | :--- |
+| **基本原則・力学** | マナレベル（無・疎・並・濃・超濃）、素質、詠唱時間、消費・維持、抵抗力学、TL修正 | [principles.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/principles.md) |
+| **用語集・新旧対照表** | 現代魔導専門用語の定義、第3版旧訳⇄第4版新訳の名称対照表、学派別呼称 | [glossary.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/glossary.md) |
+
+---
+
+## 2. 呪文系統別アーカイブ一覧
 
 本アーカイブは、2000年のマナ覚醒以降に体系化された理論魔導学派（メイジ）および伝統・儀式学派（シャーマニズム等）で共通して行使される標準魔術（ガープスマジック体系）の公式リファレンスです。
 
 | 系統番号 | 呪文系統名 | 英語名 | 収録数 | ファイルリンク | 主な用途・現代適用 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **01** | **火霊系呪文** | Fire Spells | 32種 + 12種 | [fire.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/fire.md) | 火力戦闘、熱制御、煙幕、耐熱防護、魔獣ブレス解明 |
-| **02** | **水霊系呪文** | Water Spells | 50種+ | `spells/water.md` *(順次整備)* | 水中行動、脱水・凝固、消火、液体操作、生体水分干渉 |
-| **03** | **地霊系呪文** | Earth Spells | 30種+ | `spells/earth.md` *(順次整備)* | 土木工作、硬化・装甲、トンネル掘削、巌猪等魔獣外殻 |
-| **04** | **風霊系呪文** | Air Spells | 48種+ | `spells/air.md` *(順次整備)* | 飛翔、気流制御、結界内換気、放電・雷撃誘導 |
-| **05** | **防御・警戒系** | Protection & Warning | 29種+ | `spells/protection.md` *(順次整備)* | 障壁展開、対ミサイル偏向、侵入警報、結界維持 |
-| **06** | **治癒系呪文** | Healing Spells | 20種+ | `spells/healing.md` *(順次整備)* | 止血、裂傷・骨折癒合、解毒、感染症抑制 |
-| **07** | **情報・探知系** | Knowledge Spells | 30種+ | `spells/knowledge.md` *(順次整備)* | マナ測定、透視、索敵、魔獣追跡 |
-| **08** | **精神制御系** | Mind Control Spells | 30種+ | `spells/mind.md` *(順次整備)* | 催眠、恐怖耐性付与、精神鎮圧、暴走魔獣鎮静 |
-| **09** | **死霊系呪文** | Necromantic Spells | 35種+ | `spells/necromantic.md` *(順次整備)* | 霊体除霊・成仏、ゴースト交信、死体保存・腐敗防止 |
-| **10** | **技術・動力系** | Technological Spells | 25種+ | `spells/technological.md` *(順次整備)* | 電脳魔術実験、生体電位変換、燃料精製 |
+| **02** | **水霊系呪文** | Water Spells | 67種 + 19種 | [water.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/water.md) | 水中行動、酸侵蝕、氷結、消火、東京湾アビス海域防衛 |
+| **03** | **地霊系呪文** | Earth Spells | 31種 + 11種 | [earth.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/earth.md) | 土木防壁、硬化・石化、トンネル掘削、巌猪生体装甲 |
+| **04** | **風霊系呪文** | Air Spells | 49種 + 16種 | [air.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/air.md) | 飛翔、気流制御、結界内換気、装甲無視電撃戦術 |
+| **05** | **防御・警戒系** | Protection & Warning | 41種 + 14種 | [protection.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/protection.md) | 障壁展開、対弾道偏向、侵入警報、結界都市多層防衛 |
+| **06** | **治癒系呪文** | Healing Spells | 30種 + 22種 | [healing.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/healing.md) | 止血、裂傷・骨折癒合、解毒、野戦医療トリアージ |
+| **07** | **知識・情報系** | Knowledge Spells | 52種 + 9種 | `spells/knowledge.md` *(順次整備)* | マナ測定、透視、索敵、魔獣追跡、神託15種 |
+| **08** | **精神操作系** | Mind Control Spells | 58種 + 16種 | [mind.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/mind.md) | 催眠、恐怖耐性付与、アビス精神防壁、暴走魔獣鎮静 |
+| **09** | **死霊系呪文** | Necromantic Spells | 44種 + 20種 | [necromantic.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/necromantic.md) | 専門魔法部隊の除霊・成仏、ゴースト交信、死体保存 |
+| **10** | **技術系呪文** | Technological Spells | 45種 + 10種 | [technological.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/technological.md) | 機械制御、電脳魔術実験、燃料作成、放射線除染 |
 
 ---
 

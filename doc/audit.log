@@ -83,7 +83,42 @@
   - 奥多摩の原生林・泥土・鉱物土壌での採餌シーン、クラニアル・シールド、反り返った牙、シリカ結晶混じりの剛毛、望遠レンズ被写界深度のリアルな野生ドキュメンタリー写真プロンプトを設計・生成。
   - プロジェクト内 `assets/images/001_crag_boar_wildlife.jpg` として保存・配置。
   - `creatures/001_crag_boar.md` に【野生生態写真 / Field Wildlife Documentary Photo】として埋め込み完了。
-- **ステータス**: 反映完了。
+### 7. 【合意・構築完了】ref_raw 001〜010.html のディレクトリ構造化および技術系呪文アーカイブ構築
+- **ユーザー指示・回答**: `Q: A` 採択。
+- **対応・反映**:
+  - `ref_raw/magic_page_001.html` 〜 `magic_page_010.html` を解析・選別。
+  - `world/magic/rules/principles.md`: マナレベル、素質、呪文クラス定義、エネルギー消費・維持、抵抗力学、TL修正規則を体系化して新規作成。
+  - `world/magic/rules/glossary.md`: 現代魔導専門用語の定義、第3版旧訳⇄第4版新訳の名称対照表、学派別呼称を新規作成。
+  - `world/magic/spells/technological.md`: 第6章「技術系呪文（Technological Spells）」の全45種（機械系13種、動力系16種、放射線系7種、金属・プラ系9種）＋前提ツリー（Mermaid図）＋生体媒介・電脳魔術適用例を新規作成。
+  - `world/magic/index.md`: 総合インデックスに基礎ルール・用語集および技術系呪文へのリンクを追加更新。
+- **ステータス**: 反映・構築完了。
+
+### 8. 【構築完了】magic_page_011〜100.html の一括解析と主要呪文系統アーカイブの完成
+- **ユーザー指示**: `magic_page_011.html` 〜 `magic_page_100.html` まで読み込み・構造化アーカイブを進めること。
+- **対応・反映**:
+  - 011〜100の全90ファイルを一括抽出・分類（魔法の法則017〜058, 呪文クラス090〜100, 全24呪文系統親ページ062〜089）。
+  - `world/magic/rules/principles.md`: 集中の乱れと負傷、詠唱ファンブル表（18出目）、呪文中断、維持ペナルティ等を追記拡充。
+  - 主要呪文系統アーカイブを一斉構築：
+    - `world/magic/spells/earth.md`（地霊系呪文・全42種＋前提ツリー＋剛毛巌猪装甲適用）
+    - `world/magic/spells/water.md`（水霊系呪文・全86種＋前提ツリー＋酸侵蝕・東京湾アビス適用）
+    - `world/magic/spells/air.md`（風霊系呪文・全65種＋前提ツリー＋装甲無視電撃戦術）
+    - `world/magic/spells/necromantic.md`（死霊系呪文・全64種＋前提ツリー＋専門魔法部隊除霊適用）
+    - `world/magic/spells/protection.md`（防御・警戒系呪文・全55種＋前提ツリー＋重火器障壁突破力学）
+    - `world/magic/spells/healing.md`（治癒系呪文・全52種＋前提ツリー＋野戦トリアージ適用）
+    - `world/magic/spells/mind.md`（精神操作系呪文・全74種＋前提ツリー＋対アビス精神防壁）
+  - `world/magic/index.md` の総合インデックスを更新。
+- **ステータス**: 構築・反映完了。
+
+### 9. 【Git管理設定】ref_rawフォルダ以下の除外設定（.gitignoreの策定）
+- **ユーザー指示**: `ref_raw` フォルダ以下のファイルを git commit の対象外とすること。
+- **対応・反映**:
+  - プロジェクトルートに `.gitignore` を新規作成し、`ref_raw/`、`ref_raw.html`、および解析用スクラッチファイル群（`scratch/`, `scratch_*.txt`）をコミット対象外として指定。
+  - Gitインデックスから `ref_raw/` および該当一時ファイルのステージング追跡を解除完了。
+- **ステータス**: 設定完了。
+
+
+
+
 
 
 
