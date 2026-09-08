@@ -29,6 +29,19 @@
 | **立体戦闘・異形部位・格闘術式** | 空中戦（旋回半径/失速/急降下）、車両・騎乗戦闘、四足獣・有翼獣・触手魔獣・乗り物命中部位表、鎧の隙間狙い、武器破壊・武装解除、実戦格闘（肘/膝/踏みつけ）、単分子鞭、小細工戦法 | [advanced_combat_and_martial_arts.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/advanced_combat_and_martial_arts.md) |
 | **ダメージ・負傷・マップ戦術** | ダメージ突き抜け・致傷修正倍率（pi/cut/imp/cr等）、異形生体耐性、ショック・大怪我・朦朧、後退/伏せよけ、ヘクスマップ戦術（向き/射界/誤射/多人数包囲）、魔獣蹂躙、不意打ち | [damage_and_tactics.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/damage_and_tactics.md) |
 | **判定・勝負・成長・行軍力学** | 成功判定難易度修正、クリティカル命中表、戦闘ファンブル表、能力勝負（即決/通常）、抵抗16ルール、CP成長・訓練時間、行軍・疲労算出 | [action_and_adventure.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/action_and_adventure.md) |
+| **放射線・重力気圧極限力学** | 放射線被曝量（rad/Gy/Sv）・ARS急性障害・防護係数PF、深海高圧・減圧症（ベンズ）・真空体液沸騰、異常重力（0G〜3G+）、動揺病 | [radiation_and_environmental_hazards.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/radiation_and_environmental_hazards.md) |
+| **毒素・薬物・病気感染力学** | 毒の4大投与経路・遅延時間・反復、アルコール酩酊・二日酔い、戦闘刺激剤・依存症・過剰摂取、人獣共通感染症（アビス変異熱/胞子肺炎） | [poisons_diseases_and_drugs.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/poisons_diseases_and_drugs.md) |
+| **年齢・老化・テンプレート力学** | 50歳以降の加齢判定（ST/DX/IQ/HT低下）・長寿不老形質、メガコーポ若返り医療（ナノテロメア/霊薬）、種族/職業/魔獣テンプレート設計 | [templates_and_aging.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/templates_and_aging.md) |
+| **群れ魔獣・車両操縦・衝突力学** | 群れ（Swarm）耐性・自動ダメージ、車両スペック（Hnd/SR/DR/HP）、操縦制御判定、高速衝突・衝角突撃（Ramming）ダメージ計算式 | [vehicles_and_swarms.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/vehicles_and_swarms.md) |
+| **電子・新発明・アビス怪技術** | 現代センサー（暗視/サーマル/マナ）、コンピュータ複雑さ、新発明・超発明プロセス、アビス謎の装置・怪技術、ランダム副作用表 | [inventions_and_weird_tech.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/inventions_and_weird_tech.md) |
+| **物体破壊・盾破損・修復力学** | 物体・遮蔽DR/HP一覧、過大ダメージ構造破壊、盾止め耐久力・盾破損貫通、工学修理、魔導修復呪文（《小修理》《修理》《再生》） | [objects_buildings_and_repair.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/objects_buildings_and_repair.md) |
+| **規制レベル・治安法執行力学** | 規制レベル（CR 0〜6）、治安機関・検問・裁判処罰、メガコーポ企業統治（Corporatocracy）、新人類身元管理法 | [control_ratings_and_law.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/control_ratings_and_law.md) |
+| **文明レベル・経済素材市場** | 文明レベル（TL8/9/10+）、財産レベル・標準月収・生活費、魔獣素材取引相場、魔力石価格方程式 | [economics_and_technology_levels.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/economics_and_technology_levels.md) |
+| **装備整備・故障・NPC反応力学** | 銃器・車両メンテナンス、故障値（Malf.）と野戦クリアランス、壊れた武器と修復呪文《大修理》、NPC反応表（3d6）・偏見修正 | [maintenance_and_npc_reactions.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/maintenance_and_npc_reactions.md) |
+| **職業・仕事・雇用人・忠誠度** | 危険度別仕事判定（Job Roll: 労災・死亡リスク）、雇用人（解体工/PMC/術士）日給相場、忠誠度判定（Loyalty Checks） | [jobs_hirelings_and_loyalty.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/jobs_hirelings_and_loyalty.md) |
+| **異界・アストラル・現実侵食** | 物質界・エーテル界・アストラル界、アストラル投射（幽体離脱）、4大アビス特異点、マナ暴走・重力歪曲・現実侵食（Incursions） | [planes_astral_and_abyss_dimensions.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/planes_astral_and_abyss_dimensions.md) |
+| **超常能力・士気・特殊戦術** | 超常能力（Powers）修正・パワー技能・協調攻撃、遭遇士気判定（Morale Checks: 3d6）、車両・騎乗特殊射撃テクニック | [powers_morale_and_tactical_techniques.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/powers_morale_and_tactical_techniques.md) |
+| **現代特務・調査テンプレート** | 魔導生物学者（60CP）、特務記者（70CP）、野戦医師（90CP）、特科探偵（80CP）、探検家（95CP）、闇ブローカー（60CP） | [modern_character_templates.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/modern_character_templates.md) |
 | **用語集・新旧対照表** | 現代魔導専門用語の定義、第3版旧訳⇄第4版新訳の名称対照表、学派別呼称 | [glossary.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/glossary.md) |
 
 
@@ -57,7 +70,7 @@
 | **13** | **幻覚・作成系** | Illusion & Creation | 主要7種＋派生 | [illusion.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/illusion.md) | 不信判定力学、電脳ホログラム欺瞞、非致死バリケード |
 | **14** | **魔化系呪文** | Enchantment Spells | 主要9種＋派生 | [enchantment_spells.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/enchantment_spells.md) | 魔化、魔力石作成、防具DR強化、メガコーポゴーレム |
 | **15** | **植物・菌類系** | Plant & Fungal | 主要7種＋派生 | [plant_and_fungal.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/plant_and_fungal.md) | 植物急成長、蔦拘束、菌類制御、奥多摩胞子汚染対策 |
-| **16** | **知識・情報系** | Knowledge Spells | 52種 + 9種 | `spells/knowledge.md` *(順次整備)* | マナ測定、透視、索敵、魔獣追跡、神託15種 |
+| **16** | **知識・情報系** | Knowledge Spells | 52種 + 9種 | [knowledge.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/knowledge.md) | マナ測定、透視、索敵、魔獣追跡、神託15種 |
 
 ---
 

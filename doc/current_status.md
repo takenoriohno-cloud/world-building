@@ -39,7 +39,19 @@
 | **`world/magic/rules/tactical_combat.md`** | 1秒ターン手順、14大戦闘マニューバ、命中部位、トリック攻撃、組みつき・関節技、3大能動防御（よけ/受け/止め）、さらなる努力 | **新規構築完了** | 魔導科学・理論研究部 |
 | **`world/magic/rules/advanced_combat_and_martial_arts.md`** | 空中戦・高速車両騎乗戦闘・四足獣有翼獣触手魔獣乗り物命中部位表・鎧の隙間狙い・武器破壊・実戦格闘技・単分子鞭・小細工戦法 | **新規構築完了** | 魔導科学・理論研究部 |
 | **`world/magic/rules/damage_and_tactics.md`** | ダメージ突き抜け・全致傷倍率一覧・異形生体耐性・ショック大怪我朦朧・後退伏せよけ・ヘクス戦術（向き/誤射/包囲）・蹂躙・不意打ち | **新規構築完了** | 魔導科学・理論研究部 |
-| **`world/magic/rules/action_and_adventure.md`** | 行動判定難易度時間修正・クリティカル命中表・戦闘ファンブル表・能力勝負（即決/通常）・抵抗16ルール・CP成長訓練・行軍疲労 | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/radiation_and_environmental_hazards.md`** | 放射線被曝量・ARS急性障害・防護係数PF、深海高圧・減圧症（ベンズ）・真空体液沸騰、異常重力、動揺病 | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/poisons_diseases_and_drugs.md`** | 毒の4大投与経路・遅延時間・反復、アルコール酩酊、戦闘刺激剤・依存症・過剰摂取、人獣共通感染症（アビス熱/胞子肺炎） | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/templates_and_aging.md`** | 50歳以降の加齢判定（ST/DX/IQ/HT低下）・長寿不老形質、メガコーポ若返り医療（ナノテロメア/霊薬）、テンプレート設計力学 | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/vehicles_and_swarms.md`** | 群れ（Swarm）耐性・自動ダメージ、車両スペック（Hnd/SR/DR/HP）、操縦制御判定、高速衝突衝角（Ramming）ダメージ計算式 | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/inventions_and_weird_tech.md`** | 現代センサー（暗視/サーマル/マナ）、コンピュータ複雑さ、新発明・超発明プロセス、アビス怪技術・ランダム副作用表 | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/objects_buildings_and_repair.md`** | 物体・遮蔽DR/HP一覧、過大ダメージ構造破壊、盾止め耐久力・盾破損貫通、工学修理、魔導修復呪文（《小修理》《修理》《再生》） | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/control_ratings_and_law.md`** | 規制レベル（CR 0〜6）、治安機関・検問・裁判処罰、メガコーポ企業統治（Corporatocracy）、新人類身元管理法 | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/economics_and_technology_levels.md`** | 文明レベル（TL8/9/10+）、財産レベル・標準月収・生活費、魔獣素材取引相場、魔力石価格方程式 | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/maintenance_and_npc_reactions.md`** | 銃器・車両メンテナンス、故障値（Malf.）と野戦クリアランス、壊れた武器と修復呪文《大修理》、NPC反応表（3d6）・偏見修正 | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/jobs_hirelings_and_loyalty.md`** | 危険度別仕事判定（Job Roll: 労災・死亡リスク）、雇用人（解体工/PMC/術士）日給相場、忠誠度判定（Loyalty Checks） | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/planes_astral_and_abyss_dimensions.md`** | 物質界・エーテル界・アストラル界、アストラル投射（幽体離脱）、4大アビス特異点、マナ暴走・重力歪曲・現実侵食（Incursions） | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/powers_morale_and_tactical_techniques.md`** | 超常能力（Powers）修正・パワー技能・協調攻撃、遭遇士気判定（Morale Checks: 3d6）、車両・騎乗特殊射撃テクニック | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/modern_character_templates.md`** | 魔導生物学者（60CP）、特務記者（70CP）、野戦医師（90CP）、特科探偵（80CP）、探検家（95CP）、闇ブローカー（60CP） | **新規構築完了** | 魔導科学・理論研究部 |
 | **`world/magic/rules/glossary.md`** | 現代魔導専門用語集・第3版旧訳⇄第4版新訳名称対照表 | **新規策定完了** | 魔導科学・理論研究部 |
 
 
@@ -59,6 +71,12 @@
 | **`world/magic/spells/illusion.md`** | 幻覚・作成系呪文（主要7種＋不信判定力学・電脳ホログラム欺瞞） | **新規構築完了** | 魔導科学・理論研究部 |
 | **`world/magic/spells/enchantment_spells.md`** | 魔化系呪文アーカイブ（主要9種＋防具DR強化・メガコーポゴーレム） | **新規構築完了** | 魔導科学・理論研究部 |
 | **`world/magic/spells/plant_and_fungal.md`** | 植物・菌類系呪文アーカイブ（主要7種＋奥多摩胞子汚染対策） | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/spells/knowledge.md`** | 知識・情報系呪文アーカイブ（全61種＋マナ測定・透視・神託15種） | **新規構築完了（全16系統コンプリート）** | 魔導科学・理論研究部 |
+| **`.specify/memory/constitution.md`** | SDD最上位憲章・品質ゲート基準 | **新規構築完了** | 憲章監査室 |
+| **`.specify/templates/*`** | SDD仕様書・計画・タスク・すり合わせテンプレート一式 | **新規構築完了** | 憲章監査室 |
+| **`.agents/rules/*`** | SDD行動規範（sdd-rules.md）・プロジェクト文脈定義 | **新規構築完了** | 憲章監査室 |
+| **`.agents/workflows/*`** | SDD 6大ワークフロー（specify/clarify/plan/tasks/analyze/implement/audit） | **新規構築完了** | 憲章監査室 |
+| **`.agents/skills/*`** | ドメイン知識スキル（creature-design / thaumaturgy-engine） | **新規構築完了** | 憲章監査室 |
 | **`creatures/001_crag_boar.md`** | 剛毛巌猪（クラッグ・ボア / Class-B / Threat Level II）図鑑記事 | **完全更新完了（標本＋生態写真）** | 生態・生物調査部 |
 | **`doc/questions_and_answers.md`** | 世界観Q&A・意思決定ログ（Q1〜Q8体系的再編・正史エビデンス） | **完全復元・運用中** | 憲章監査室 |
 | **`doc/audit.log`** | すり合わせ質問ログ・会話履歴・意思決定の変遷記録 | **運用中** | 憲章監査室 |
