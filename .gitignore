@@ -1,8 +1,20 @@
 # Raw HTML and references
 ref_raw/
 ref_raw.html
+ref_colleges_utf8/
+ref_colleges_parsed/
 
-# Scratch files and temporary parsing logs
+# Scratch and temporary files
 scratch/
-scratch_*.txt
+scratch_*
 *.ps1.tmp
+doc/*.ps1
+doc/summary_*.txt
+
+# Download and parsing scripts
+download_*
+colleges_list.json
+
+# Python cache
+__pycache__/
+*.pyc

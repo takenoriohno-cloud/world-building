@@ -52,6 +52,15 @@
 | **`world/magic/rules/planes_astral_and_abyss_dimensions.md`** | 物質界・エーテル界・アストラル界、アストラル投射（幽体離脱）、4大アビス特異点、マナ暴走・重力歪曲・現実侵食（Incursions） | **新規構築完了** | 魔導科学・理論研究部 |
 | **`world/magic/rules/powers_morale_and_tactical_techniques.md`** | 超常能力（Powers）修正・パワー技能・協調攻撃、遭遇士気判定（Morale Checks: 3d6）、車両・騎乗特殊射撃テクニック | **新規構築完了** | 魔導科学・理論研究部 |
 | **`world/magic/rules/modern_character_templates.md`** | 魔導生物学者（60CP）、特務記者（70CP）、野戦医師（90CP）、特科探偵（80CP）、探検家（95CP）、闇ブローカー（60CP） | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/corruption_dark_arts_and_special_talents.md`** | 汚染度（Corruption 1〜100生体崩壊）、闇の業（Dark Arts: 代償詠唱・精神汚染）、特科警察・退治屋（160CP）、民間呪術/催眠/外道電算才能 | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/psychic_weapons_and_martial_artifacts.md`** | サイキック・ソード（装甲除数(5)）、パイロ/ニューロ刃、格闘戦術魔導具（毒手薬/装甲油/爆裂首飾/力士米）、超能力治癒・神性恩寵 | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/cosmic_horror_and_abyss_entities.md`** | 宇宙からの色（TL V）、古のもの/エルダーシング（TL IV）、パイロ・タイガー、サイ・ビースト、Pスコーピオン、アラネア、電気の体 | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/slimes_undead_and_stress_mechanics.md`** | 不定形プディング（刺突無効/酸腐食）、トロール高速再生・火炎酸弱点、吸血鬼・グール、バイタリティリザーブ（VR）、精神ストレス | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/cthulhu_punk_and_innsmouth_traits.md`** | CMB神話生物、3d6正気度恐怖判定（Fright Checks）、インスマス面（東京湾水棲変異/水圧耐性/皮膚乾燥）、呪曲・音波魔術 | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/abyss_cults_and_deity_factions.md`** | 現代カルト（メシア/ガイア/シャイアーテックス/マホロバ）、伝統神格信仰（スサノオ/八幡/リリス）、異界尖兵ゴーレム（コサラスワ/デモン） | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/lunar_deities_and_regional_realms.md`** | 6大月輪神性（銀/緑/黒/双子/青/赤）の信仰恩寵、要塞都市境界検問、過酷アウトランド環境、大崩壊・真空魔法力学 | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/subhuman_races_and_abyss_hybrids.md`** | 新人類4大系統（エルファ/ゲルーシャ/ドワーフ/獣人/翼人/爬虫人）、アビス深淵種（多足のもの/姿なきグルグドゥ/重装甲獣）、変異使役動物 | **新規構築完了** | 魔導科学・理論研究部 |
+| **`world/magic/rules/tactical_careers_and_mook_mechanics.md`** | 10大専門職系譜テンプレート（戦士/射手/僧侶/魔導/医者/職人/賊/狩人/商人/特化元素）、ムーク高速処理、足手まとい護衛、組織運用、癖 | **新規構築完了** | 魔導科学・理論研究部 |
 | **`world/magic/rules/glossary.md`** | 現代魔導専門用語集・第3版旧訳⇄第4版新訳名称対照表 | **新規策定完了** | 魔導科学・理論研究部 |
 
 

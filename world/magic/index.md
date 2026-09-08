@@ -42,6 +42,15 @@
 | **異界・アストラル・現実侵食** | 物質界・エーテル界・アストラル界、アストラル投射（幽体離脱）、4大アビス特異点、マナ暴走・重力歪曲・現実侵食（Incursions） | [planes_astral_and_abyss_dimensions.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/planes_astral_and_abyss_dimensions.md) |
 | **超常能力・士気・特殊戦術** | 超常能力（Powers）修正・パワー技能・協調攻撃、遭遇士気判定（Morale Checks: 3d6）、車両・騎乗特殊射撃テクニック | [powers_morale_and_tactical_techniques.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/powers_morale_and_tactical_techniques.md) |
 | **現代特務・調査テンプレート** | 魔導生物学者（60CP）、特務記者（70CP）、野戦医師（90CP）、特科探偵（80CP）、探検家（95CP）、闇ブローカー（60CP） | [modern_character_templates.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/modern_character_templates.md) |
+| **魂の汚染度・闇の業・特化才能** | 汚染度（Corruption 1〜100生体崩壊）、闇の業（Dark Arts: 代償詠唱・精神汚染）、特科警察・退治屋（160CP）、民間呪術/催眠/外道電算才能 | [corruption_dark_arts_and_special_talents.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/corruption_dark_arts_and_special_talents.md) |
+| **精神ブレード・格闘魔導具** | サイキック・ソード（装甲除数(5)）、パイロ/ニューロ刃、格闘戦術魔導具（毒手薬/装甲油/爆裂首飾/力士米）、超能力治癒・神性恩寵 | [psychic_weapons_and_martial_artifacts.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/psychic_weapons_and_martial_artifacts.md) |
+| **アビス深淵種・コズミックホラー** | 宇宙からの色（TL V）、古のもの/エルダーシング（TL IV）、パイロ・タイガー、サイ・ビースト、Pスコーピオン、アラネア、電気の体 | [cosmic_horror_and_abyss_entities.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/cosmic_horror_and_abyss_entities.md) |
+| **スライム・不死再生・ストレス** | 不定形プディング（刺突無効/酸腐食）、トロール高速再生・火炎酸弱点、吸血鬼・グール、バイタリティリザーブ（VR）、精神ストレス | [slimes_undead_and_stress_mechanics.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/slimes_undead_and_stress_mechanics.md) |
+| **クトゥルフ神話・インスマス変異** | CMB神話生物、3d6正気度恐怖判定（Fright Checks）、インスマス面（東京湾水棲変異/水圧耐性/皮膚乾燥）、呪曲・音波魔術 | [cthulhu_punk_and_innsmouth_traits.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/cthulhu_punk_and_innsmouth_traits.md) |
+| **アビスカルト・神格信仰勢力** | 現代カルト（メシア/ガイア/シャイアーテックス/マホロバ）、伝統神格信仰（スサノオ/八幡/リリス）、異界尖兵ゴーレム（コサラスワ/デモン） | [abyss_cults_and_deity_factions.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/abyss_cults_and_deity_factions.md) |
+| **月輪神性・辺境要塞・真空魔法** | 6大月輪神性（銀/緑/黒/双子/青/赤）の信仰恩寵、要塞都市境界検問、過酷アウトランド環境、大崩壊・真空魔法力学 | [lunar_deities_and_regional_realms.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/lunar_deities_and_regional_realms.md) |
+| **新人類亜種・アビス変異種族** | 新人類4大系統（エルファ/ゲルーシャ/ドワーフ/獣人/翼人/爬虫人）、アビス深淵種（多足のもの/姿なきグルグドゥ/重装甲獣）、変異使役動物 | [subhuman_races_and_abyss_hybrids.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/subhuman_races_and_abyss_hybrids.md) |
+| **現代特務キャリア・ムーク戦闘力学** | 10大専門職系譜テンプレート（戦士/射手/僧侶/魔導/医者/職人/賊/狩人/商人/特化元素）、ムーク高速処理、足手まとい護衛、組織運用、癖 | [tactical_careers_and_mook_mechanics.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/tactical_careers_and_mook_mechanics.md) |
 | **用語集・新旧対照表** | 現代魔導専門用語の定義、第3版旧訳⇄第4版新訳の名称対照表、学派別呼称 | [glossary.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/rules/glossary.md) |
 
 
@@ -71,6 +80,18 @@
 | **14** | **魔化系呪文** | Enchantment Spells | 主要9種＋派生 | [enchantment_spells.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/enchantment_spells.md) | 魔化、魔力石作成、防具DR強化、メガコーポゴーレム |
 | **15** | **植物・菌類系** | Plant & Fungal | 主要7種＋派生 | [plant_and_fungal.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/plant_and_fungal.md) | 植物急成長、蔦拘束、菌類制御、奥多摩胞子汚染対策 |
 | **16** | **知識・情報系** | Knowledge Spells | 52種 + 9種 | [knowledge.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/knowledge.md) | マナ測定、透視、索敵、魔獣追跡、神託15種 |
+| **17** | **移動系呪文** | Movement Spells | 47種 + 派生 | [movement.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/movement.md) | 韋駄天、浮揚、飛行術、瞬間移動、特殊部隊立体強襲 |
+| **18** | **音声系呪文** | Sound Spells | 28種 + 派生 | [sound.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/sound.md) | 沈黙、拡声、音噴射、爆裂衝球、対魔獣音響戦術・盗聴遮断 |
+| **19** | **情報伝達・共感系** | Communication & Empathy | 35種 + 派生 | [communication.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/communication.md) | 嘘看破、思考察知、テレパシー、言語翻訳、精神尋問規制 |
+| **20** | **食料系呪文** | Food Spells | 24種 + 派生 | [food.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/food.md) | 毒見、食料浄化、解体、保存食、魔獣ジビエ流通（三段階分類） |
+| **21** | **天候系呪文** | Weather Spells | 31種 + 派生 | [weather.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/weather.md) | 気象予測、霧、雲、雨、嵐、電光（落雷）、結界都市気象防衛 |
+| **22** | **肉体操作系** | Body Control Spells | 65種 + 派生 | [body_control.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/body_control.md) | 剛力、俊敏、強壮、四肢麻痺、PMC強化兵士バイオエンハンス |
+| **23** | **光・闇系呪文** | Light & Darkness Spells | 33種 + 派生 | [light_darkness.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/light_darkness.md) | 閃光、夜間視覚、熱線視覚、真闇、不可視化、光学電子戦 |
+| **24** | **物体操作系** | Making & Breaking Spells | 35種 + 派生 | [making_breaking.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/making_breaking.md) | 弱点看破、粉砕、応急修理、完全修復、野戦兵器レストア |
+| **25** | **呪文操作・連動系** | Meta & Linking Spells | 41種 + 派生 | [meta.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/meta.md) | 対抗呪文、呪文防御、反射、呪文遅発、連動、対術士電子魔導戦 |
+| **26** | **精霊系呪文** | Elemental Spirit Spells | 12種（四大源素） | [elemental_spirit.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/elemental_spirit.md) | 四大精霊召喚・支配・作成、非物理霊体駆逐、インフラ災害救助 |
+| **27** | **砲兵・致死系** | Artillery & Death Spells | 拡張戦略級 | [artillery_and_death.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/artillery_and_death.md) | 気圧爆増、破滅の雲、落石弾幕、死の圏域、自衛隊特科連携火砲 |
+| **28** | **簡単呪文・民間魔法** | The Least of Spells | 前提なし全般 | [least_spells.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/world/magic/spells/least_spells.md) | 火花、滴り、そよ風、部分染み抜き、スラム日常生存知恵（CR0） |
 
 ---
 
