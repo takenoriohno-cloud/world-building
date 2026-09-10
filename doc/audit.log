@@ -553,3 +553,83 @@
   5. **Q&A正史記録 (`doc/questions_and_answers.md`)**:
      - Q14（マルチメディア部隊設立とMermaid規格）を公式エビデンスとして記録。
 - **ステータス**: 反映・検証完了。
+
+### 41. 【2026-09-10】サバンナ頂点捕食魔獣「陽炎巨鬣獅 パイロ・プライド・ライオン」図鑑記事（第007号）の完全構築
+- **ユーザー指示**: サバンナに生息する魔獣の図鑑を作成（4候補から「陽炎巨鬣獅 パイロ・プライド・ライオン」を選択・進行）。
+- **対応・反映**:
+  1. **仕様策定・計画・タスク (`.specify/`)**:
+     - 仕様書（`.specify/specs/creatures/007_pyro_pride_lion.spec.md`）、実装計画（`.specify/plans/creatures/007_pyro_pride_lion.plan.md`）、タスク一覧（`.specify/tasks/creatures/007_pyro_pride_lion.tasks.md`）を順次策定。
+  2. **外部科学・解剖学・魔導力学グラウンディング**:
+     - 原種ライオン（*Panthera leo*）の解剖学（咬合力1,300 PSI、骨密度2倍、体長3.0m/体重380kg/SM +1）および生体熱力学（耐熱ケラチン鬣/皮下太陽熱嚢）を設計。
+     - GURPS 4thデータブロック（ST 24, DX 13, HT 12, HP 28, DR 8/4, FP 16 / 《蜃気楼》《火球》《熱気》《低周波咆哮》）を策定。
+  3. **視覚アセット生成・配備 (`assets/creatures/007_pyro_pride_lion/`)**:
+     - `generate_image` を活用し、セレンゲティ夕暮れの野生成体写真（`pyro_lion_wild.jpg`）および深紅芯部を持つ耐熱ケラチン鬣マクロ標本写真（`pyro_lion_mane_macro.jpg`）を生成・配置。
+  4. **図鑑記事作成 (`creatures/007_pyro_pride_lion.md`)**:
+     - `TEMPLATE.md` 完全準拠（全8章構成）。
+     - Mermaid生体熱励起解剖図（`flowchart TD` / `subgraph`）および戦術的熱波包囲狩猟図（`flowchart LR`）を構築。
+     - 音響分析（4.3節: 18Hz〜120Hz低周波インフラサウンド地響き咆哮、音圧120dB）。
+     - Threat Level: III（高度危険種 / 7.62mmAP・12.7mm重機関銃推奨）、Class-B（要処理種 / 太陽熱嚢摘出プロトコル・極上太陽獅子ロース）。
+  5. **Q&A記録 (`doc/questions_and_answers.md`)**:
+     - Q15（サバンナ頂点捕食種パイロ・プライド・ライオンの生体熱力学と戦術）を公式正史として記録。
+- **ステータス**: 作成・反映完了。
+
+### 42. 【2026-09-10】深海・海洋浮遊魔獣「幽光星海月 アストラル・ネビュラ・ジェリー」図鑑記事（第008号）の完全構築
+- **ユーザー指示**: 海の不思議なクラゲの図鑑を作成（3候補から「幽光星海月 アストラル・ネビュラ・ジェリー」を選択・進行）。
+- **対応・反映**:
+  1. **仕様策定・計画・タスク (`.specify/`)**:
+     - 仕様書（`.specify/specs/creatures/008_astral_nebula_jelly.spec.md`）、実装計画（`.specify/plans/creatures/008_astral_nebula_jelly.plan.md`）、タスク一覧（`.specify/tasks/creatures/008_astral_nebula_jelly.tasks.md`）を順次策定。
+  2. **外部科学・海洋解剖学・魔導力学グラウンディング**:
+     - 鉢クラゲ綱（*Aurelia*）の水分率97%ゲル骨格、傘径3.0m/触手20m（SM +2）、散在神経網、および星核嚢（*Organum Astronucleare*）の青紫燐光（480〜520nm）を設計。
+     - 低比重マナ流体（比重0.92）による海面上1〜3m空中浮遊力学、アストラル幻惑刺胞毒（多幸感・浮遊トランス）、突き抜け耐性（Diffuse / 銃撃無効）を策定。
+  3. **視覚アセット生成・配備 (`assets/creatures/008_astral_nebula_jelly/`)**:
+     - `generate_image` を活用し、夜間海面で星雲状に発光・浮遊する野生成体写真（`astral_jelly_wild.jpg`）および高純度発光核「星核嚢」マクロ標本写真（`astral_jelly_core_macro.jpg`）を生成・配置。
+  4. **図鑑記事作成 (`creatures/008_astral_nebula_jelly.md`)**:
+     - `TEMPLATE.md` 完全準拠（全8章構成）。
+     - Mermaid発光浮遊解剖図（`flowchart TD` / `subgraph`）およびブルーム回遊・海洋サプライチェーン図（`flowchart TD`）を構築。
+     - 音響分析（4.3節: 0.5Hz〜5Hz超低周波水中水流拍動、432Hzマナ共振音）。
+     - Threat Level: II（警戒対象 / 航行ソナー障害・アクティブソナー威嚇）、Class-B（要処理種 / ミョウバン塩蔵法・高級星海月刺身・三ツ菱マナテック製ホログラム素子）。
+  5. **Q&A記録 (`doc/questions_and_answers.md`)**:
+     - Q16（深海・沿岸浮遊魔獣アストラル・ネビュラ・ジェリーの生体発光と資源利用）を公式正史として記録。
+- **ステータス**: 作成・反映完了。
+
+### 43. 【2026-09-10】洞窟性結晶不定形魔獣「鍾乳石灰粘塊 カルサイト・ケイブ・スライム」図鑑記事（第009号）の完全構築
+- **ユーザー指示**: 洞穴で見つかるスライムの一種の図鑑を作成（3候補から「鍾乳石灰粘塊 カルサイト・ケイブ・スライム」を選択・進行）。
+- **対応・反映**:
+  1. **仕様策定・計画・タスク (`.specify/`)**:
+     - 仕様書（`.specify/specs/creatures/009_calcite_cave_slime.spec.md`）、実装計画（`.specify/plans/creatures/009_calcite_cave_slime.plan.md`）、タスク一覧（`.specify/tasks/creatures/009_calcite_cave_slime.tasks.md`）を順次策定。
+  2. **外部科学・洞窟地質学・魔導力学グラウンディング**:
+     - 好アルカリ性変形菌の多糖類バイオポリマー、微小方解石（$CaCO_3$）懸濁、直径1.5m/重量120kg（SM 0〜+1）を設計。
+     - 天井滴下奇襲（Drop & Smother）、pH 3.5〜4.5有機カルシウムキレート溶解酸、粘弾性流体による突き抜け耐性（Diffuse / 銃撃・刺突無効）を策定。
+  3. **視覚アセット生成・配備 (`assets/creatures/009_calcite_cave_slime/`)**:
+     - `generate_image` を活用し、日原鍾乳洞の天井から鍾乳石に擬態して滴下する野生成体写真（`calcite_slime_wild.jpg`）および結晶粒子が懸濁する琥珀粘性ゲルマクロ標本写真（`calcite_slime_gel_macro.jpg`）を生成・配置。
+  4. **図鑑記事作成 (`creatures/009_calcite_cave_slime.md`)**:
+     - `TEMPLATE.md` 完全準拠（全8章構成）。
+     - Mermaid生体鉱物懸濁解剖図（`flowchart TD` / `subgraph`）および擬態捕食・バイオ建材サプライチェーン図（`flowchart TD`）を構築。
+     - 音響分析（4.3節: 1.5〜3kHz滴下水音擬態、80〜150Hz粘性破裂音）。
+     - Threat Level: II（警戒対象 / 銃撃厳禁・火炎放射/消石灰散布戦術）、Class-B（要処理種 / 重曹脱酸・薬膳鍾乳水信玄餅・ヤマト重工自己修復バイオセメント原料）。
+  5. **Q&A記録 (`doc/questions_and_answers.md`)**:
+     - Q17（洞窟性結晶スライム カルサイト・ケイブ・スライムの生体力学とバイオ建材）を公式正史として記録。
+- **ステータス**: 作成・反映完了。
+
+### 44. 【2026-09-10】中東・超巨大古代覚醒怪鳥「砂嵐巨怪鳥 ロック（アル・ルフ）」図鑑記事（第010号）の完全構築
+- **ユーザー指示**: 海外で発見されたロック鳥の図鑑を作成（3候補から「砂嵐巨怪鳥 ロック（アル・ルフ）」を選択・進行）。
+- **対応・反映**:
+  1. **仕様策定・計画・タスク (`.specify/`)**:
+     - 仕様書（`.specify/specs/creatures/010_titanoroc_arabicus.spec.md`）、実装計画（`.specify/plans/creatures/010_titanoroc_arabicus.plan.md`）、タスク一覧（`.specify/tasks/creatures/010_titanoroc_arabicus.tasks.md`）を順次策定。
+  2. **外部科学・超巨大鳥類航空力学・魔導力学グラウンディング**:
+     - 生体カーボン・シリカハニカム中空骨格、翼開長32m/体重5.5t（SM +4）、5.5t把持力猛禽鉤爪を設計。
+     - 風速45m/s局所砂嵐（ハブーブ）形成、高高度急降下（300km/h）・装甲車吊り上げ・岩盤投下粉砕捕食、チタンケラチン羽毛（DR 12）、空力衝撃波スクリーン（《風壁》）を策定。
+  3. **視覚アセット生成・配備 (`assets/creatures/010_titanoroc_arabicus/`)**:
+     - `generate_image` を活用し、中東ハジャル山脈上空で砂嵐を纏い戦闘機がスクランブル発進する航空生態写真（`roc_wild_photo.jpg`）およびハニカム構造断面を持つチタン羽軸マクロ標本写真（`roc_quill_macro.jpg`）を生成・配置。
+  4. **図鑑記事作成 (`creatures/010_titanoroc_arabicus.md`)**:
+     - `TEMPLATE.md` 完全準拠（全8章構成）。
+     - Mermaid航空生体力学構造図（`flowchart TD` / `subgraph`）および落下狩猟・国際防空回廊図（`flowchart TD`）を構築。
+     - 音響分析（4.3節: 12〜35Hz超低周波翼ばたき音、130dB裂帛怪鳥咆哮）。
+     - Threat Level: IV（天災指定・航空要塞級 / 20mm・30mm機関砲・中距離誘導弾・戦闘機迎撃必須）、Class-C（汚染種 / 食用不可・次世代ステルス戦闘機主翼フレーム・対爆シールド卵殻）。
+  5. **Q&A記録 (`doc/questions_and_answers.md`)**:
+     - Q18（中東古代覚醒怪鳥ロックの航空生体力学と軍事防空）を公式正史として記録。
+- **ステータス**: 作成・反映完了。
+
+
+
+

@@ -6,7 +6,7 @@
 - **対象仕様書**: `[.specify/specs/creatures/006_carbuncle.spec.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/.specify/specs/creatures/006_carbuncle.spec.md)`
 - **対象計画書**: `[.specify/plans/creatures/006_carbuncle.plan.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/.specify/plans/creatures/006_carbuncle.plan.md)`
 - **作成日**: 2026-09-10
-- **ステータス**: 進行中
+- **ステータス**: 実装・監査完了
 
 ---
 
