@@ -86,6 +86,14 @@
 3. **② 地理・環境調査部（Geographical & Env. Div.）**: 結界都市、防護壁、アウトランド、特異災害指定地域（アビス汚染域）の環境・マップ策定（`world/geography.md`）。
 4. **③ 歴史・社会制度考証部（Historical & Social Div.）**: 2000年〜2026年年表、法制度、メガコーポ、新人類（メタヒューマン）差別、軍事組織（`world/history.md`）。
 5. **④ 魔導科学・理論研究部（Thaumaturgical Theory Div.）**: マナの非物質性、生体・魂への作用理論、障壁力学、テクノマジック黎明期、電脳魔術（`world/magic_theory.md`）。
+6. **⑤ 視覚・音響・資料記録部（Visual, Acoustic & Multi-Media Div.）**: 生態写真・標本スケッチ・顕微鏡写真の生成（`assets/`管理）、生息地マップ・写真作成、音響周波数（Acoustic Logs）設計、Mermaid構造図（解剖図・流通網・食物連鎖）の規格統制。
+
+### 4.1 Mermaid構造図・マルチメディア資料策定規範
+- **Mermaid構造図の完全標準化**: 生体解剖図、生息地流通網、食物連鎖等はアスキーアートではなくMermaidで記述する。
+  - **構文エスケープ義務**: 記号（`()`、`[]`、`:`など）を含むノードラベルは構文エラー防止のため必ずダブルクォーテーション `["..."]` で囲む。
+  - **図種別の適用基準**: 生体器官・階層構造は `flowchart TD / subgraph`、流通網・サプライチェーンは `flowchart TD / LR`、食物連鎖は `flowchart BT`、時系列変異は `sequenceDiagram / timeline` を用いる。
+- **画像アセット管理**: 学術写真・生態写真は `generate_image` を活用し、`assets/creatures/<id>_<name>/` に格納してMarkdown内に埋め込む。
+- **音響・通信記録（Acoustic & Radio Logs）**: 魔獣の鳴き声・警戒音・共振パルスは周波数帯（kHz/Hz）、音圧（dB）、波形特性を学術的に記述する。
 
 ---
 
