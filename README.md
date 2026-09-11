@@ -119,8 +119,10 @@ world-building/
 | **011** | [**千眼触手星雲** (アビス・ポリプ)](creatures/011_abyss_polyp.md)<br>*Abyssanima polyposa* | TL IV | Class-C | 青木ヶ原異界汚染域。虹色虚眼球による視覚精神汚染（SAN値崩壊）と位相転移。 |
 | **012** | [**樹皮小人** (ボウトラックル)](creatures/012_wood_bowtruckle.md)<br>*Dendrognathus lignum* | TL I | Class-B | 英国古代樹林。植物節足キメラ構造・超精密木質棘爪による樹木相利共生。 |
 | **013** | [**幻光モルフォ** (モルフォ・ファントマ)](creatures/013_morpho_phantasma.md)<br>*Morpho phantasma* | TL II | Class-B | アマゾン林冠層。棚状多層結晶による光屈折不可視化・残像投影・幻覚性燐粉。 |
+| **014** | [**旋風鎌鼬** (カマイタチ)](creatures/014_kamaitachi.md)<br>*Mustela itatsi falcata* | TL II | Class-B | 信越・飛騨山岳魔境。3頭協調狩猟（転ばし・鎌爪切断・無痛麻痺）と局所真空刃。 |
 
 ---
+
 
 ## 4. 仕様書駆動開発 (SDD) ガバナンス体制
 
