@@ -73,11 +73,11 @@ world-building/
 │       ├── rules/                 # GURPS 4th 魔導・戦闘・社会全34ルール
 │       └── spells/                # 四大元素・技術・死霊・知識等 全16系統呪文
 │
-├── creatures/                     # 個別魔獣・幻獣図鑑エントリー（第1号〜第13号）
+├── creatures/                     # 個別魔獣・幻獣図鑑エントリー（第1号〜第16号）
 │   ├── 001_crag_boar.md           # 剛毛巌猪（クラッグ・ボア / Class-B）
 │   ├── 002_thunder_gryphon.md     # 迅雷鷲獅子（サンダー・グリフォン / Class-A）
 │   ├── 003_urban_street_spirit.md # 辻神・都市霊（アーバン・スピリット / 霊体種）
-│   ├── 004_magma_salamander.md    # 紅蓮鯢（マグマ・サラマンダー / Class-B）
+│   ├── 004_magma_salamander.md    # 溶岩火蜥蜴（マグマ・サラマンダー / Class-B）
 │   ├── 005_dew_sprite.md          # 朝露小精霊（デュー・スプライト / Class-A）
 │   ├── 006_carbuncle.md           # 紅玉小獣（カーバンクル / Class-A）
 │   ├── 007_pyro_pride_lion.md     # 陽炎巨鬣獅（パイロ・プライド・ライオン / Class-B）
@@ -86,15 +86,18 @@ world-building/
 │   ├── 010_titanoroc_arabicus.md  # 砂嵐巨怪鳥（ロック / アル・ルフ / Class-C）
 │   ├── 011_abyss_polyp.md         # 千眼触手星雲（アビス・ポリプ / Class-C）
 │   ├── 012_wood_bowtruckle.md     # 樹皮小人（ボウトラックル / Class-B）
-│   └── 013_morpho_phantasma.md    # 幻光モルフォ（モルフォ・ファントマ / Class-B）
+│   ├── 013_morpho_phantasma.md    # 幻光モルフォ（モルフォ・ファントマ / Class-B）
+│   ├── 014_kamaitachi.md          # 旋風鎌鼬（カマイタチ / Class-B）
+│   ├── 015_spined_armored_viper.md # 棘甲鎧蛇（トゲヨロイヘビ / Class-B）
+│   └── 016_shirakiri_owl.md       # 白霧梟（シラキリフクロウ / Class-A）
 │
 ├── assets/                        # マルチメディア資料アーカイブ
 │   ├── images/                    # 地図・作戦マップ画像
-│   └── creatures/                 # 魔獣別高精細写真（標本マクロ・野生写真）
+│   └── creatures/                 # 魔獣別高精細写真（標本マクロ・野生写真・料理写真）
 │
 └── doc/                           # プロジェクト管理・正史監査ログ
     ├── current_status.md          # 現在の成果物・タスク進捗サマリー
-    ├── questions_and_answers.md   # 世界観Q&A（Q1〜Q22 決定事項正史エビデンス）
+    ├── questions_and_answers.md   # 世界観Q&A（Q1〜Q28 決定事項正史エビデンス）
     └── audit.log                  # 対話経緯・すり合わせ変更履歴ログ
 ```
 
@@ -102,14 +105,14 @@ world-building/
 
 ## 3. 収録魔獣・幻獣図鑑一覧
 
-現在、第1号から第13号までの魔獣エントリーが完全構築されています。各記事には**GURPS 4th準拠の戦闘データ**、**Mermaid生体解剖図**、**音響周波数データ（Acoustic Logs）**、および**高精細視覚資料**が完備されています。
+現在、第1号から第16号までの魔獣エントリーが完全構築されています。各記事には**GURPS 4th準拠の戦闘データ**、**Mermaid生体解剖図**、**音響周波数データ（Acoustic Logs）**、および**高精細視覚資料**が完備されています。
 
 | No. | 和名 / 学名 | 脅威度 | 資源区分 | 主生息域 / 特徴 |
 | :---: | :--- | :---: | :---: | :--- |
 | **001** | [**剛毛巌猪** (クラッグ・ボア)](creatures/001_crag_boar.md)<br>*Sus scrofa petrosus* | TL II | Class-B | 奥多摩山岳魔境。シリカ結晶装甲剛毛（DR 14/7）と時速54km/h突進。 |
 | **002** | [**迅雷鷲獅子** (サンダー・グリフォン)](creatures/002_thunder_gryphon.md)<br>*Gryphus fulgurans* | TL IV | Class-A | 北米カスケード山脈。生体雷管（ライデン腺）と20mm対空砲迎撃空域。 |
 | **003** | [**辻神・都市霊** (アーバン・スピリット)](creatures/003_urban_street_spirit.md)<br>*Genius loci urbanus* | TL II | Class-C | シアトル・メトロプレックス。アスファルト・ネオン管・煤煙の具現霊体。 |
-| **004** | [**紅蓮鯢** (マグマ・サラマンダー)](creatures/004_magma_salamander.md)<br>*Megaloandrias vulcanus* | TL III | Class-B | 浅間山火口マグマ湖。黒曜石外殻（DR 12）と熱衝撃（ヒートショック）戦術。 |
+| **004** | [**溶岩火蜥蜴** (マグマ・サラマンダー)](creatures/004_magma_salamander.md)<br>*Salamandra vulcanica* | TL III | Class-B | 南欧・エトナ火山。玄武黒曜外殻（DR 12）とヒートショック急冷戦術。 |
 | **005** | [**朝露小精霊** (デュー・スプライト)](creatures/005_dew_sprite.md)<br>*Faylla rorifica* | TL I | Class-A | 独シュヴァルツヴァルト。浮遊水滴球と半透明小人の非好戦的治癒精霊。 |
 | **006** | [**紅玉小獣** (カーバンクル)](creatures/006_carbuncle.md)<br>*Carbunculus gemmifer* | TL I | Class-A | 高尾山マナ保護林。額の生体ルビー結晶による《屈折障壁》《精神沈静》。 |
 | **007** | [**陽炎巨鬣獅** (パイロ・ライオン)](creatures/007_pyro_pride_lion.md)<br>*Leo solaris* | TL III | Class-B | 東アフリカ・サバンナ。耐熱ケラチン鬣による蜃気楼迷彩とプライド包囲狩猟。 |
@@ -117,9 +120,13 @@ world-building/
 | **009** | [**鍾乳石灰粘塊** (カルサイト・スライム)](creatures/009_calcite_cave_slime.md)<br>*Calcislimus spelunca* | TL II | Class-B | 日原鍾乳洞。方解石懸濁ゲルによる鍾乳石擬態・落下捕食・銃撃無効。 |
 | **010** | [**砂嵐巨怪鳥** (ロック / アル・ルフ)](creatures/010_titanoroc_arabicus.md)<br>*Titanoroc arabicus* | TL IV | Class-C | 中東ハジャル山脈。翼開長30m超・ハニカム骨格・局所砂嵐を操る天災怪鳥。 |
 | **011** | [**千眼触手星雲** (アビス・ポリプ)](creatures/011_abyss_polyp.md)<br>*Abyssanima polyposa* | TL IV | Class-C | 青木ヶ原異界汚染域。虹色虚眼球による視覚精神汚染（SAN値崩壊）と位相転移。 |
-| **012** | [**樹皮小人** (ボウトラックル)](creatures/012_wood_bowtruckle.md)<br>*Dendrognathus lignum* | TL I | Class-B | 英国古代樹林。植物節足キメラ構造・超精密木質棘爪による樹木相利共生。 |
+| **012** | [**樹皮小人** (ボウトラックル)](creatures/012_wood_bowtruckle.md)<br>*Dendrophasma britannicum* | TL I | Class-B | 英国古代樹林。植物節足キメラ構造・超精密木質棘爪による樹木相利共生。 |
 | **013** | [**幻光モルフォ** (モルフォ・ファントマ)](creatures/013_morpho_phantasma.md)<br>*Morpho phantasma* | TL II | Class-B | アマゾン林冠層。棚状多層結晶による光屈折不可視化・残像投影・幻覚性燐粉。 |
 | **014** | [**旋風鎌鼬** (カマイタチ)](creatures/014_kamaitachi.md)<br>*Mustela itatsi falcata* | TL II | Class-B | 信越・飛騨山岳魔境。3頭協調狩猟（転ばし・鎌爪切断・無痛麻痺）と局所真空刃。 |
+| **015** | [**棘甲鎧蛇** (トゲヨロイヘビ)](creatures/015_spined_armored_viper.md)<br>*Acanthoserpens echinatus* | TL II | Class-B | 奥多摩・丹沢カルスト岩石林。チタンケイ素逆棘装甲（DR 7）・棘射出・薬膳鍋。 |
+| **016** | [**白霧梟** (シラキリフクロウ)](creatures/016_shirakiri_owl.md)<br>*Strix cryophilus* | TL I | Class-A | 奥多摩鍾乳洞冷気林。0dB無音滑空・サーマル隠蔽・《瞬間凍結》トゲヘビ天敵・炭火串焼き。 |
+| **017** | [**白霊千鳥** (カラドリウス)](creatures/017_caladrius.md)<br>*Charadrius caladrius* | TL I | Class-B | 地中海サントリーニ島等（外来輸入）。病魔吸引・太陽光昇華代謝・白霊砂再生薬・薬膳澄まし仕立て。 |
+
 
 ---
 
