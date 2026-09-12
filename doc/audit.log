@@ -890,6 +890,28 @@
      - `.specify/plans/018_shadow_fish.plan.md` を新規格（全9章タイトル行番号、呪文《闇》《暗視》《残像》、生体特徴 `Diffuse` のGrep突合エビデンス）に基づき完全更新。
 - **ステータス**: **全憲章・テンプレート・計画書反映完了（Done）**。
 
+---
+
+### 62. 【2026-09-12】第008号エントリー 幽光星海月（アストラル・ネビュラ・ジェリー）の新規格全9章再構築・完了
+- **ユーザー指示**: `008_astral_nebula_jelly.md` を最初のフェーズ0から作り直して。
+- **対応・反映**:
+  1. **Phase 0（Specify）**:
+     - `.specify/specs/creatures/008_astral_nebula_jelly.spec.md` を最新高規格フォーマット（全9章構成、古典文献考証、原典発祥地マッピング、3大画像生成規格、6ペルソナ事前審査見解）に基づき完全起草。
+  2. **Gate 1（仕様すり合わせ）**:
+     - ユーザーへの方向性提示（Option A: 幻想浮遊・高級ジビエ型、Option B: 海洋航行災害・多幸霧型、Option C: メガコーポ極秘養殖・光学軍事型）に対し、**Option A（幻想浮遊・高級ジビエ型）**が正式採択。
+  3. **Gate 2（計画策定・ペルソナ査定）**:
+     - `.specify/plans/creatures/008_astral_nebula_jelly.plan.md` および `.specify/tasks/creatures/008_astral_nebula_jelly.tasks.md` を作成。
+     - 査定質問（Q1: 巨星主級変異モデル ➔ Option B「星雲核」、Q2: 海洋航行管理 ➔ Option A「海保ソナー誘導＋豊洲捕獲」）を合意。
+  4. **クォータ枯渇緊急停止＆方針1採択・名前再選定**:
+     - 画像生成クォータ枯渇に伴いHALT。ユーザー判断により「方針1（テキスト執筆先行・既存画像活用）」および標準和名「幽光星海月（ユウコウホシクラゲ）」が確定。
+  5. **Phase 5（執筆）＆ Phase 6（エビデンス検証）**:
+     - `creatures/008_astral_nebula_jelly.md` を全9章構成で完全執筆。
+     - GURPS公式呪文（《浮揚》《茫然》《持続光》）および生体特徴 `Diffuse` のGrep突合エビデンスをPlanチェックリストで全照合・合格判定。
+     - `doc/questions_and_answers.md`（Q35）、`doc/current_status.md` を完了同期。
+- **ステータス**: **新規格全9章 完全再構築完了（Done）**。
+
+
+
 
 
 
