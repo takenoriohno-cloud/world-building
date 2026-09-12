@@ -1,31 +1,27 @@
-# タスクリスト (Tasks)
-<!-- .specify/tasks/creatures/007_pyro_pride_lion.tasks.md -->
+# 【タスク一覧】第007号 カゲロウライオン（陽炎獅子）生態図鑑新規格再構築
 
-# 【タスク一覧】第007号：陽炎巨鬣獅 パイロ・プライド・ライオン (Pyro-Pride Lion)
+## 1. タスクリスト
 
-- **対象仕様書**: `[.specify/specs/creatures/007_pyro_pride_lion.spec.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/.specify/specs/creatures/007_pyro_pride_lion.spec.md)`
-- **対象計画書**: `[.specify/plans/creatures/007_pyro_pride_lion.plan.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/.specify/plans/creatures/007_pyro_pride_lion.plan.md)`
-- **作成日**: 2026-09-10
-- **ステータス**: 実装・監査完了
+- [x] **Task 1: 生息・分布マップ（SVG/PNG）の生成・配備**
+  - Natural Earth パブリックドメイン世界地図をベースに、東アフリカ（セレンゲティ・マサイマラ）およびサハラ特異点南部生息ポリゴンを重畳した `pyro_lion_map.svg` および `pyro_lion_range_map.png` を生成。
+  - 出力先: `assets/creatures/007_pyro_pride_lion/`
 
----
+- [x] **Task 2: 第1章〜第4章の執筆・構造化**
+  - 第1章 早わかり表（Fast Facts）およびサファリ4WD（4.8m）との直感的サイズ比較、マップ・視覚資料3点リンク。
+  - 第2章 伝承考証（ネメアの獅子、サムソン、セクメト）と2000年火霊マナ変異史。
+  - 第3章 解剖学的身体構造（400kg、1,300 PSI咬合力、耐熱鬣DR 8、太陽熱嚢）とMermaid生体熱解剖連関図。
+  - 第4章 プライド包囲狩猟（Mermaidネットワーク図）、マサイ族オラマイヨ儀礼変容、サファリ防護フェンス摩擦。
 
-## 1. 依存関係順タスクリスト
+- [x] **Task 3: 第5章〜第6章の執筆（戦闘・軍事データ）**
+  - 第5章 GURPS 4thデータブロック（ST 24, HP 28, DR 8, 《加熱》《火球》《火吹き》《戦慄》Grep突合）。
+  - 第6章 軍事対処（5.56mm無効、7.62mm AP弾 / 12.7mm M2重機関銃・ミリ波レーダー照準・消火冷却戦術）。
 
-- [x] **Task 1: [マルチメディアアセットの生成・配置]**
-  - `generate_image` を活用し、サバンナでの野生生態写真および鬣マクロ標本写真を生成し、`assets/creatures/007_pyro_pride_lion/` へ配備。
-  - **検証基準**: アセットディレクトリに高精細画像が格納されていること。
-- [x] **Task 2: [Mermaid構造図・音響分析の設計]**
-  - 生体熱励起解剖図（`flowchart TD` / `subgraph`）およびプライド包囲戦術・流通ネットワーク図の構築。
-  - 18Hz〜120Hz低周波インフラサウンド音響データの設計。
-  - **検証基準**: 記号エスケープが完全でレンダリング可能なMermaidコードであること。
-- [x] **Task 3: [図鑑記事の作成 (`creatures/007_pyro_pride_lion.md`)]**
-  - `TEMPLATE.md` 準拠の全8章構成による完全記述（解剖・生態・軍事・GURPS 4th・Class-B解体・手記）。
-  - **検証基準**: テンプレート全項目が網羅され、生々しいリアリズムと数値基準を満たしていること。
-- [x] **Task 4: [品質ゲート検査（/sdd.analyze）]**
-  - 6大部署・憲章監査マトリクスによる整合性検証。
-  - **検証基準**: 全チェック項目をパスし、設定衝突がないこと。
-- [x] **Task 5: [監査ログ・Q&A・進捗ドキュメントの更新（/sdd.audit）]**
-  - `doc/questions_and_answers.md`（Q15）、`doc/audit.log` への永続記録。
-  - **検証基準**: 公式エビデンスとして確定されていること。
+- [x] **Task 4: 第7章〜第9章の執筆（ジビエ・現場ログ・派生種）**
+  - 第7章 Class-B解体プロトコル（太陽熱嚢・火炎腺完全摘出）、太陽獅子ロースステーキ、耐熱消防服・航空潤滑油素材。
+  - 第8章 セレンゲティ第1特科サファリレンジャー隊長の遭遇記録。
+  - 第9章 サハラ特異点亜種（*P. l. saharae*）、カラハリ小型種、メガコーポ特許情報。
+
+- [x] **Task 5: SDD品質監査およびドキュメント同期**
+  - Planチェックリスト客観的エビデンス（章節タイトル・行番号）の完全照合。
+  - `doc/questions_and_answers.md`（Q37）、`doc/audit.log`（第64項）、`doc/current_status.md` の同期。
 
