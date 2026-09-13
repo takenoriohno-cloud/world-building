@@ -76,14 +76,14 @@ graph TD
         F -->|"気温上昇・乾燥（日中）"| H["【地下水脈・葉裏への退避】<br>水滴化・無害な休眠状態"]
     end
 
-    style P fill:#2d1a4a,stroke:#9f7aea,stroke-width:2px;
-    style E fill:#1a365d,stroke:#63b3ed,stroke-width:2px;
-    style M fill:#145a32,stroke:#48bb78,stroke-width:2px;
-    style S fill:#234e52,stroke:#38b2ac,stroke-width:2px;
-    style F fill:#2c5282,stroke:#4299e1,stroke-width:3px;
-    style P1 fill:#22543d,stroke:#68d391,stroke-width:2px;
-    style P2 fill:#744210,stroke:#d69e2e,stroke-width:2px;
-    style H fill:#1a202c,stroke:#718096,stroke-width:2px;
+    style P fill:#2d1a4a,stroke:#9f7aea,stroke-width:2px,color:#ffffff;
+    style E fill:#1a365d,stroke:#63b3ed,stroke-width:2px,color:#ffffff;
+    style M fill:#145a32,stroke:#48bb78,stroke-width:2px,color:#ffffff;
+    style S fill:#234e52,stroke:#38b2ac,stroke-width:2px,color:#ffffff;
+    style F fill:#2c5282,stroke:#4299e1,stroke-width:3px,color:#ffffff;
+    style P1 fill:#22543d,stroke:#68d391,stroke-width:2px,color:#ffffff;
+    style P2 fill:#744210,stroke:#d69e2e,stroke-width:2px,color:#ffffff;
+    style H fill:#1a202c,stroke:#718096,stroke-width:2px,color:#ffffff;
 ```
 
 ---

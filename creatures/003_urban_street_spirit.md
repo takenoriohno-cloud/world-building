@@ -74,12 +74,12 @@ graph TD
         E -->|"対霊魔術（霊撃・ディスペル）"| D2["【霊的消滅】<br>アストラル核の霧散"]
     end
 
-    style S fill:#2c3e50,stroke:#3498db,stroke-width:2px;
-    style C fill:#1a365d,stroke:#63b3ed,stroke-width:2px;
-    style A fill:#4a154b,stroke:#e056fd,stroke-width:2px;
-    style E fill:#2d3748,stroke:#f6e05e,stroke-width:3px;
-    style D1 fill:#742a2a,stroke:#e53e3e,stroke-width:2px;
-    style D2 fill:#553c9a,stroke:#9f7aea,stroke-width:2px;
+    style S fill:#2c3e50,stroke:#3498db,stroke-width:2px,color:#ffffff;
+    style C fill:#1a365d,stroke:#63b3ed,stroke-width:2px,color:#ffffff;
+    style A fill:#4a154b,stroke:#e056fd,stroke-width:2px,color:#ffffff;
+    style E fill:#2d3748,stroke:#f6e05e,stroke-width:3px,color:#ffffff;
+    style D1 fill:#742a2a,stroke:#e53e3e,stroke-width:2px,color:#ffffff;
+    style D2 fill:#553c9a,stroke:#9f7aea,stroke-width:2px,color:#ffffff;
 ```
 
 ---

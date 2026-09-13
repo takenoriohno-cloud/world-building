@@ -73,11 +73,11 @@ graph LR
         H -->|"Class-B合格肉出荷"| T["【都心・豊洲新中央市場】<br>料亭・ジビエ専門店（巌猪鍋）"]
     end
 
-    style A fill:#2d1a1a,stroke:#e74c3c,stroke-width:2px;
-    style B fill:#332211,stroke:#f39c12,stroke-width:2px;
-    style W fill:#1a2a3a,stroke:#3498db,stroke-width:2px;
-    style H fill:#1c2833,stroke:#2ecc71,stroke-width:2px;
-    style T fill:#145a32,stroke:#27ae60,stroke-width:2px;
+    style A fill:#2d1a1a,stroke:#e74c3c,stroke-width:2px,color:#ffffff;
+    style B fill:#332211,stroke:#f39c12,stroke-width:2px,color:#ffffff;
+    style W fill:#1a2a3a,stroke:#3498db,stroke-width:2px,color:#ffffff;
+    style H fill:#1c2833,stroke:#2ecc71,stroke-width:2px,color:#ffffff;
+    style T fill:#145a32,stroke:#27ae60,stroke-width:2px,color:#ffffff;
 ```
 
 ---

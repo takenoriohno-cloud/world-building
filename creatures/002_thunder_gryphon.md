@@ -130,13 +130,13 @@ flowchart TD
         E -->|"導電性羽毛供給"| G["【軍需メガコーポ】<br>アレス社 電磁シールド防弾ベスト"]
     end
 
-    style A fill:#1e293b,stroke:#facc15,stroke-width:2px;
-    style B fill:#0f172a,stroke:#38bdf8,stroke-width:2px;
-    style C fill:#334155,stroke:#e11d48,stroke-width:2px;
-    style D fill:#14532d,stroke:#22c55e,stroke-width:2px;
-    style E fill:#451a03,stroke:#f97316,stroke-width:2px;
-    style F fill:#064e3b,stroke:#34d399,stroke-width:2px;
-    style G fill:#1e1b4b,stroke:#818cf8,stroke-width:2px;
+    style A fill:#1e293b,stroke:#facc15,stroke-width:2px,color:#ffffff;
+    style B fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#ffffff;
+    style C fill:#334155,stroke:#e11d48,stroke-width:2px,color:#ffffff;
+    style D fill:#14532d,stroke:#22c55e,stroke-width:2px,color:#ffffff;
+    style E fill:#451a03,stroke:#f97316,stroke-width:2px,color:#ffffff;
+    style F fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#ffffff;
+    style G fill:#1e1b4b,stroke:#818cf8,stroke-width:2px,color:#ffffff;
 ```
 
 ### 4.1 軍事・航空防衛・駆除体制
@@ -244,11 +244,11 @@ flowchart TD
     C --> D["Step 3: ライデン腺の絶縁摘出<br>（シリコン絶縁メスで器官周囲を完全切除）"]
     D --> E["Step 4: 部位別解体 ＆ 出荷検査<br>（Class-B合格証明タグ貼付）"]
 
-    style A fill:#450a0a,stroke:#dc2626,stroke-width:2px;
-    style B fill:#78350f,stroke:#f59e0b,stroke-width:2px;
-    style C fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px;
-    style D fill:#14532d,stroke:#22c55e,stroke-width:2px;
-    style E fill:#064e3b,stroke:#10b981,stroke-width:2px;
+    style A fill:#450a0a,stroke:#dc2626,stroke-width:2px,color:#ffffff;
+    style B fill:#78350f,stroke:#f59e0b,stroke-width:2px,color:#ffffff;
+    style C fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#ffffff;
+    style D fill:#14532d,stroke:#22c55e,stroke-width:2px,color:#ffffff;
+    style E fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#ffffff;
 ```
 
 1. **Step 1: アース放電処置（Earthing Discharge）**:
