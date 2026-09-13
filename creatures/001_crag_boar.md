@@ -25,64 +25,7 @@
 
 ### 生息・分布マップ（Distribution & Habitat Range Map）
 
-```xml
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
-  <rect width="800" height="450" fill="#0f172a"/>
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
-    <radialGradient id="manaCore" cx="30%" cy="40%" r="60%">
-      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.4"/>
-      <stop offset="60%" stop-color="#f59e0b" stop-opacity="0.15"/>
-      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-
-  <rect width="800" height="450" fill="url(#bgGrad)"/>
-  <circle cx="260" cy="180" r="180" fill="url(#manaCore)"/>
-
-  <!-- 山岳等高線・アウトランド境界 -->
-  <path d="M 50,80 Q 180,40 320,90 T 520,130 T 750,90" fill="none" stroke="#334155" stroke-width="2" stroke-dasharray="4,4"/>
-  <path d="M 40,160 Q 200,120 360,170 T 580,210 T 760,180" fill="none" stroke="#334155" stroke-width="2" stroke-dasharray="4,4"/>
-  <path d="M 60,260 Q 220,220 380,270 T 600,310 T 780,280" fill="none" stroke="#334155" stroke-width="2" stroke-dasharray="4,4"/>
-
-  <!-- 地形エリア -->
-  <polygon points="80,100 240,60 340,140 280,260 120,240" fill="#7f1d1d" fill-opacity="0.35" stroke="#ef4444" stroke-width="2"/>
-  <polygon points="280,150 440,120 520,220 420,320 300,270" fill="#78350f" fill-opacity="0.35" stroke="#f59e0b" stroke-width="2"/>
-  
-  <!-- 防衛境界線（国道16号・圏央道） -->
-  <line x1="560" y1="40" x2="560" y2="410" stroke="#38bdf8" stroke-width="4" stroke-dasharray="8,4"/>
-  <line x1="680" y1="40" x2="680" y2="410" stroke="#22c55e" stroke-width="3"/>
-
-  <!-- 拠点・要塞プロット -->
-  <circle cx="200" cy="150" r="8" fill="#ef4444"/>
-  <text x="200" y="130" fill="#fca5a5" font-size="13" font-family="sans-serif" font-weight="bold" text-anchor="middle">【一次野生生息地】奥多摩深部魔境</text>
-  <text x="200" y="180" fill="#cbd5e1" font-size="11" font-family="sans-serif" text-anchor="middle">（雲取山・日原鉱物泥ヌタ場）</text>
-
-  <circle cx="390" cy="220" r="7" fill="#f59e0b"/>
-  <text x="390" y="200" fill="#fde68a" font-size="12" font-family="sans-serif" font-weight="bold" text-anchor="middle">【採餌・移動回廊】五日市街道廃墟群</text>
-  <text x="390" y="245" fill="#cbd5e1" font-size="11" font-family="sans-serif" text-anchor="middle">（秋川渓谷・母系群れ回廊）</text>
-
-  <circle cx="560" cy="260" r="9" fill="#0284c7" stroke="#38bdf8" stroke-width="2"/>
-  <text x="560" y="295" fill="#38bdf8" font-size="12" font-family="sans-serif" font-weight="bold" text-anchor="middle">あきる野前線検問ゲート</text>
-  <text x="560" y="315" fill="#94a3b8" font-size="10" font-family="sans-serif" text-anchor="middle">（圏央道防衛線 / 12.7mm重機関銃座）</text>
-
-  <circle cx="680" cy="280" r="8" fill="#16a34a"/>
-  <text x="680" y="260" fill="#4ade80" font-size="12" font-family="sans-serif" font-weight="bold" text-anchor="middle">八王子前線要塞基地</text>
-  <text x="680" y="340" fill="#86efac" font-size="10" font-family="sans-serif" text-anchor="middle">（第3同心円 / 認可魔獣解体場）</text>
-
-  <!-- 凡例 -->
-  <rect x="30" y="360" width="300" height="70" rx="6" fill="#0f172a" fill-opacity="0.9" stroke="#334155" stroke-width="1.5"/>
-  <circle cx="45" cy="380" r="5" fill="#ef4444"/>
-  <text x="60" y="384" fill="#e2e8f0" font-size="11" font-family="sans-serif">高濃度生息域（雄の単独縄張り）</text>
-  <circle cx="45" cy="400" r="5" fill="#f59e0b"/>
-  <text x="60" y="404" fill="#e2e8f0" font-size="11" font-family="sans-serif">母系群れ採餌回廊（突進被害多発）</text>
-  <line x1="38" y1="418" x2="52" y2="418" stroke="#38bdf8" stroke-width="3"/>
-  <text x="60" y="422" fill="#e2e8f0" font-size="11" font-family="sans-serif">圏央道・防衛迎撃ライン</text>
-</svg>
-```
+![オクタマイワシシ生息・分布マップ](../assets/creatures/001_crag_boar/boar_map.svg)
 
 > **【生息分布データ】**:
 > - **一次野生生息地（原産地・高濃度マナ域）**: 東京都西多摩郡奥多摩町〜山梨県・埼玉県境（雲取山・日原鍾乳洞周辺・標高800〜1,800m）。石英脈露頭と鉱物混じりの泥土ヌタ場に定着。
