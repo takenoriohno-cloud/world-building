@@ -1,0 +1,91 @@
+{
+  "type": "FeatureCollection",
+  "name": "defense_infrastructure",
+  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "DEF-CATANIA-01",
+        "name": "カターニャ軍港・国連マナ海上警戒基地 (Catania UN Mana Harbor Base)",
+        "region": "Sicily, Italy",
+        "type": "Naval / Magister Base",
+        "status": "Operational"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [15.087, 37.502]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "DEF-MESSINA-02",
+        "name": "メッシーナ海峡対空防衛ゲート (Messina Strait Defense Line)",
+        "region": "Sicily, Italy",
+        "type": "Air & Sea Gate",
+        "status": "Operational"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [15.555, 38.193]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "DEF-ETNA-POST-03",
+        "name": "NATO第9アルピーニ魔導観測所 (NATO 9th Alpine Magister Post)",
+        "region": "Sicily, Italy",
+        "type": "High-Altitude Observation",
+        "status": "Active Surveillance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [15.001, 37.750]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "DEF-DAIKANBO-04",
+        "name": "阿蘇大観峰 監視レーダー神殿 (Daikanbo Radar & Barrier Temple)",
+        "region": "Kumamoto, Japan",
+        "type": "Tactical Radar / Barrier Anchor",
+        "status": "JGSDF 8th Division"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [131.056, 33.003]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "DEF-KUSASENRI-05",
+        "name": "草千里ヶ浜 地熱観測ステーション (Kusasenri Geothermal Station)",
+        "region": "Kumamoto, Japan",
+        "type": "Geothermal Monitoring",
+        "status": "Civilian / Yamato Heavy Ind."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [131.051, 32.884]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "DEF-KUMAMOTO-06",
+        "name": "熊本平野 外縁要塞線 (Kumamoto Plain Outer Defense Line)",
+        "region": "Kumamoto, Japan",
+        "type": "Urban Buffer Fortification",
+        "status": "Kyushu Defense Bureau"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [130.707, 32.803]
+      }
+    }
+  ]
+}

@@ -25,7 +25,11 @@
 
 ### 生息・分布マップ（Distribution & Habitat Range Map）
 
-![生息・分布マップ](../assets/creatures/004_magma_salamander/004_magma_salamander_map.svg)
+![実標高DEM生息・分布タクティカルマップ（国土地理院DEM 10m / Copernicus GLO-30）](../assets/creatures/004_magma_salamander/004_magma_salamander_range_map.png)
+*【図1.1】実標高DEM陰影起伏（Shaded Relief）による一次野生生息地（エトナ山）および国内定着地（阿蘇カルデラ）の火霊マナ濃度・生息ホットスポット戦術図（Copernicus GLO-30 / 国土地理院 10m DEM合成）。*[^hasumi_1]
+
+![ベクター戦術分布図（等高線・広域ロケーター付き）](../assets/creatures/004_magma_salamander/004_magma_salamander_map.svg)
+*【図1.2】地名・等高線・広域インセット・防衛線を含むタクティカル・ベクターマップ（全天候戦術HUD仕様）。*
 
 > **【生息分布データ】**:
 > - **一次野生生息地（原産地・特異点）**: 南欧地中海火山帯（シチリア島エトナ山、ヴェスヴィオ、アイスランド地熱火山帯）。溶岩湖水深 0〜15m、マグマ温度 900〜1,200℃。
