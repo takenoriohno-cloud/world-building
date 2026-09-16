@@ -1,4 +1,4 @@
-# 砲兵・致死系呪文 (Artillery & Death Spells)
+﻿# 砲兵・致死系呪文 (Artillery & Death Spells)
 
 本ドキュメントは、ガープス第4版サプリメント『GURPS Magic: Artillery Spells』および『GURPS Magic: Death Spells』の公式データを基に、広域面制圧・対大型魔獣破砕砲撃・致死毒壊死呪術、および2026年現代における自衛隊特科・対天災級魔獣迎撃戦を体系化した公式魔術アーカイブです。
 
@@ -12,19 +12,39 @@
 
 ```mermaid
 graph TD
-    classDef spell fill:#ffebee,stroke:#c62828,stroke-width:1px;
-    
-    AirMastery["【風霊系上位10種】"] --> FallingSky["《気圧爆増*（フォール・スカイ）》"]:::spell
-    AirMastery --> CloudOfDoom["《破滅の雲*》"]:::spell
-    
-    EarthMastery["【地霊系上位10種】"] --> BoulderBarrage["《落石弾幕*》"]:::spell
-    EarthMastery --> SeismicShock["《跳ね上げ地霊*（直下地震）》"]:::spell
-    
-    FireMastery["【火霊系上位10種】"] --> MagmaBurst["《溶岩爆裂砲*》"]:::spell
-    
-    BodyMastery["【肉体操作上位10種】"] --> DeathField["《死の圏域*（即死波動）》"]:::spell
-    NecroMastery["【死霊系上位10種】"] --> PlagueTouch["《感染の死の手*》"]:::spell
+    %% クラススタイル定義（高コントラスト・ダークモード規格）
+    classDef spell fill:#0f172a,stroke:#38bdf8,stroke-width:1.5px,color:#ffffff;
+    classDef root fill:#0369a1,stroke:#38bdf8,stroke-width:2px,color:#ffffff,font-weight:bold;
+    classDef ext fill:#1e293b,stroke:#94a3b8,stroke-width:1px,color:#cbd5e1,stroke-dasharray: 5 5;
+    classDef special fill:#4c1d95,stroke:#c084fc,stroke-width:1.5px,color:#ffffff;
+
+    %% 系統内呪文ノード定義
+    subgraph Sub_4E6907F2 ["砲兵・致死系主要呪文データ一覧"]
+        FallingSky["《気圧爆増*》<br>(Falling Sky)"]:::spell
+        CloudofDoom["《破滅の雲*》<br>(Cloud of Doom)"]:::spell
+        BoulderBarrage["《落石弾幕*》<br>(Boulder Barrage)"]:::spell
+        SeismicShock["《跳ね上げ地霊*》<br>(Seismic Shock)"]:::spell
+        DeathField["《死の圏域*》<br>(Death Field)"]:::spell
+        PlagueTouch["《感染の死の手*》<br>(Plague Touch)"]:::spell
+    end
+
+    %% 前提条件依存関係エッジ
+    Req_1 --> FallingSky
+    Req_2 --> CloudofDoom
+    Req_3 --> BoulderBarrage
+    Req_4 --> SeismicShock
+    Req_5 --> DeathField
+    Req_6 --> PlagueTouch
+
+    %% 外部系統・特殊前提ノード
+    Req_1["【前提: 指定範囲の上空気圧を瞬時に数千ヘクトパスカル上昇さ...】"]:::ext
+    Req_2["【前提: 肺胞と粘膜を一瞬で溶かす濃硫酸状の有毒重ガス雲を散...】"]:::ext
+    Req_3["【前提: 巨大な岩石の雹を上空から雨あられと降らせ、装甲車両...】"]:::ext
+    Req_4["【前提: 直下型S波を集中発生させ、敵陣の地盤を垂直に数十メ...】"]:::ext
+    Req_5["【前提: 範囲内のすべての生命体の中枢神経と心筋を直接停止さ...】"]:::ext
+    Req_6["【前提: 触れた目標を即死させると同時に、その遺体から周囲へ...】"]:::ext
 ```
+
 
 ---
 
@@ -32,13 +52,7 @@ graph TD
 
 | 呪文名（日 / 英） | クラス | 基本消費 / 維持 | 詠唱時間 | 前提条件 | 効果概要・力学 |
 | :--- | :---: | :---: | :---: | :--- | :--- |
-| **《気圧爆増*》**<br>Falling Sky | 範囲 | 2〜10 (面積毎) | 1秒/2点 | 素質4, 風霊系8種 | 指定範囲の上空気圧を瞬時に数千ヘクトパスカル上昇させ、押し潰し圧殺。 |
-| **《破滅の雲*》**<br>Cloud of Doom | 範囲/抵 | 5 (面積毎) | 1秒 | 素質4, 風霊・毒系10種 | 肺胞と粘膜を一瞬で溶かす濃硫酸状の有毒重ガス雲を散布。 |
-| **《落石弾幕*》**<br>Boulder Barrage | 範囲 | 2〜6 (面積毎) | 1秒/2点 | 素質4, 地霊系10種 | 巨大な岩石の雹を上空から雨あられと降らせ、装甲車両をも粉砕。 |
-| **《跳ね上げ地霊*》**<br>Seismic Shock | 範囲 | 8 (面積毎) | 1秒 | 素質4, 《地震》等10種 | 直下型S波を集中発生させ、敵陣の地盤を垂直に数十メートル跳ね上げる。 |
-| **《死の圏域*》**<br>Death Field | 範囲/抵 | 2〜6 (面積毎) | 1秒/2点 | 素質4, 《死の手》等10種 | 範囲内のすべての生命体の中枢神経と心筋を直接停止させる死神の波。 |
-| **《感染の死の手*》**<br>Plague Touch | 白兵/抵 | 3の倍数 | 2秒 | 素質4, 《疫病》, 《死の手》 | 触れた目標を即死させると同時に、その遺体から周囲へ即効性壊死毒を飛散。 |
-
+| **《気圧爆増*》**<br>Falling Sky | 範囲 | 2〜10 (面積毎) | 1秒/2点 | 素質4, 風霊系8種 | 指定範囲の上空気圧を瞬時に数千ヘクトパスカル上昇させ、押し潰し圧殺。 | 詳細参照 | **《破滅の雲*》**<br>Cloud of Doom | 範囲/抵 | 5 (面積毎) | 1秒 | 素質4, 風霊・毒系10種 | 肺胞と粘膜を一瞬で溶かす濃硫酸状の有毒重ガス雲を散布。 | 詳細参照 | **《落石弾幕*》**<br>Boulder Barrage | 範囲 | 2〜6 (面積毎) | 1秒/2点 | 素質4, 地霊系10種 | 巨大な岩石の雹を上空から雨あられと降らせ、装甲車両をも粉砕。 | 詳細参照 | **《跳ね上げ地霊*》**<br>Seismic Shock | 範囲 | 8 (面積毎) | 1秒 | 素質4, 《地震》等10種 | 直下型S波を集中発生させ、敵陣の地盤を垂直に数十メートル跳ね上げる。 | 詳細参照 | **《死の圏域*》**<br>Death Field | 範囲/抵 | 2〜6 (面積毎) | 1秒/2点 | 素質4, 《死の手》等10種 | 範囲内のすべての生命体の中枢神経と心筋を直接停止させる死神の波。 | 詳細参照 | **《感染の死の手*》**<br>Plague Touch | 白兵/抵 | 3の倍数 | 2秒 | 素質4, 《疫病》, 《死の手》 | 触れた目標を即死させると同時に、その遺体から周囲へ即効性壊死毒を飛散。 | 詳細参照 
 ---
 
 ## 3. 2026年軍事バランス・対大型魔獣戦における運用
