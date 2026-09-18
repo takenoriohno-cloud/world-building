@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradMetro" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="corpTowerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0369a1" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="slumZoneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e11d48" stop-opacity="0.65" />
+      <stop offset="100%" stop-color="#9f1239" stop-opacity="0.25" />
+    </linearGradient>
+    <linearGradient id="abyssSewageGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#581c87" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#090514" stop-opacity="0.95" />
+    </linearGradient>
+    <filter id="neonGlowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="neonGlowPink" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="720" fill="url(#bgGradMetro)" />
+
+  <!-- Grid / Coordinate Lines -->
+  <g stroke="#1e293b" stroke-width="0.7" stroke-dasharray="4,4">
+    <line x1="80" y1="40" x2="80" y2="680" />
+    <line x1="240" y1="40" x2="240" y2="680" />
+    <line x1="400" y1="40" x2="400" y2="680" />
+    <line x1="560" y1="40" x2="560" y2="680" />
+    <line x1="720" y1="40" x2="720" y2="680" />
+    <line x1="880" y1="40" x2="880" y2="680" />
+    <line x1="40" y1="120" x2="920" y2="120" />
+    <line x1="40" y1="280" x2="920" y2="280" />
+    <line x1="40" y1="460" x2="920" y2="460" />
+    <line x1="40" y1="600" x2="920" y2="600" />
+  </g>
+
+  <!-- Seattle Metroplex Multi-Tier Cross Section -->
+  <!-- Tier 1: Upper Corp Spires (Megacorp Sky-Domes) -->
+  <rect x="60" y="100" width="840" height="130" rx="8" fill="url(#corpTowerGrad)" stroke="#0284c7" stroke-width="1.5" />
+  <text x="80" y="130" fill="#38bdf8" font-size="14" font-family="sans-serif" font-weight="bold">【上層 Tier 1】メガコーポ本社タワー群 ＆ 軌道回廊（Ares / Renraku Arcologies）</text>
+  <text x="80" y="152" fill="#94a3b8" font-size="11" font-family="sans-serif">・防衛体制: Knight Errant 常駐パトロール / 高出力対霊電磁結界ドーム / ドローン索敵網</text>
+  <text x="80" y="172" fill="#64748b" font-size="11" font-family="sans-serif">・ガイロセイレイ侵入状況: 結界境界線（Aegis Barrier）により完全遮断（進入不可領域）</text>
+
+  <!-- Skywalk Interceptor Gates -->
+  <g stroke="#38bdf8" stroke-width="2" stroke-dasharray="6,3" filter="url(#neonGlowCyan)">
+    <line x1="280" y1="230" x2="280" y2="290" />
+    <line x1="680" y1="230" x2="680" y2="290" />
+  </g>
+  <text x="290" y="265" fill="#38bdf8" font-size="10" font-family="sans-serif">高架スカイウォーク検問所</text>
+  <text x="690" y="265" fill="#38bdf8" font-size="10" font-family="sans-serif">非常用気密シャッターゲート</text>
+
+  <!-- Tier 2: Mid-Level Commercial & Street Level (Rain District Slums) -->
+  <rect x="60" y="280" width="840" height="230" rx="8" fill="url(#slumZoneGrad)" stroke="#f43f5e" stroke-width="2" filter="url(#neonGlowPink)" />
+  <text x="80" y="310" fill="#fda4af" font-size="15" font-family="sans-serif" font-weight="bold">【中〜下層 Tier 2】シアトル第4スラム地区「レイン・ディストリクト」（主要使役領域）</text>
+  <text x="80" y="332" fill="#fecdd3" font-size="11" font-family="sans-serif">・環境特性: 酸性雨、PM2.5排気ガス煤煙、ネオン管破損残骸、アスファルト舗装路面</text>
+  <text x="80" y="352" fill="#ffe4e6" font-size="11" font-family="sans-serif">・勢力分布: 先住民族系メタヒューマン共同体 / ストリートシャーマン・サークル</text>
+
+  <!-- Tactical POI Markers inside Slum -->
+  <!-- 1. Summoning Graffiti Nexus -->
+  <circle cx="200" cy="410" r="9" fill="#e11d48" stroke="#ffffff" stroke-width="2" />
+  <text x="200" y="390" fill="#fecdd3" font-size="12" font-family="sans-serif" font-weight="bold" text-anchor="middle">【主要召喚拠点】スプレーグラフィティ結界陣</text>
+  <text x="200" y="435" fill="#fda4af" font-size="10" font-family="sans-serif" text-anchor="middle">（路地裏ジャンクヤード / 集合思念励起点）</text>
+
+  <!-- 2. Ambush Chokepoint -->
+  <polygon points="450,380 470,410 430,410" fill="#f59e0b" stroke="#ffffff" stroke-width="1.5" />
+  <text x="450" y="430" fill="#fde68a" font-size="11" font-family="sans-serif" font-weight="bold" text-anchor="middle">ゲリラ迎撃チョークポイント</text>
+  <text x="450" y="445" fill="#fef3c7" font-size="9.5" font-family="sans-serif" text-anchor="middle">（Knight Errant 装甲パトロール車迎撃地点）</text>
+
+  <!-- 3. Smog Screen Extraction Alley -->
+  <rect x="680" y="380" width="160" height="60" rx="4" fill="#334155" fill-opacity="0.8" stroke="#cbd5e1" stroke-width="1.5" />
+  <text x="760" y="405" fill="#f1f5f9" font-size="11" font-family="sans-serif" font-weight="bold" text-anchor="middle">PM2.5煙幕撤退回廊</text>
+  <text x="760" y="425" fill="#cbd5e1" font-size="9.5" font-family="sans-serif" text-anchor="middle">（赤外線・暗視完全遮蔽エリア）</text>
+
+  <!-- Drainage & Underground Ducts -->
+  <g stroke="#a855f7" stroke-width="2" stroke-dasharray="4,4">
+    <line x1="200" y1="510" x2="200" y2="550" />
+    <line x1="520" y1="510" x2="520" y2="550" />
+    <line x1="780" y1="510" x2="780" y2="550" />
+  </g>
+  <text x="530" y="535" fill="#c084fc" font-size="10" font-family="sans-serif">暗渠排水本管・地下鉄廃トンネル連絡口</text>
+
+  <!-- Tier 3: Underground Abyssal Sewers -->
+  <rect x="60" y="550" width="840" height="130" rx="8" fill="url(#abyssSewageGrad)" stroke="#9333ea" stroke-width="1.5" />
+  <text x="80" y="580" fill="#d8b4fe" font-size="14" font-family="sans-serif" font-weight="bold">【最下層 Tier 3】地下廃水処理網 ＆ アンダーグラウンド・アビス（霊的還流層）</text>
+  <text x="80" y="602" fill="#c084fc" font-size="11" font-family="sans-serif">・霊的動態: 任務完了精霊のアストラル核還流（送還水脈） / 未契約野良悪霊（Urban Poltergeist）の滞留</text>
+  <text x="80" y="622" fill="#a855f7" font-size="11" font-family="sans-serif">・東京対比: 東京湾岸アビス（夢の島地下埋没層・有明新人類居留区）と同等の高エーテル残滓域</text>
+
+  <!-- Map Title Box (Top Right) -->
+  <rect x="520" y="20" width="380" height="65" rx="6" fill="#0f172a" fill-opacity="0.9" stroke="#334155" stroke-width="1.5" />
+  <text x="535" y="45" fill="#f8fafc" font-size="14" font-family="sans-serif" font-weight="bold">ガイロセイレイ［街路精霊］都市作戦階層図</text>
+  <text x="535" y="68" fill="#94a3b8" font-size="10.5" font-family="sans-serif">Urban Street Spirit Tactical Multi-Tier Deployment Map</text>
+
+  <!-- Legend Box (Bottom Left Floating) -->
+  <rect x="80" y="640" width="800" height="30" rx="4" fill="#0f172a" fill-opacity="0.95" stroke="#475569" stroke-width="1" />
+  <circle cx="95" cy="655" r="5" fill="#e11d48" />
+  <text x="105" y="659" fill="#e2e8f0" font-size="10" font-family="sans-serif">召喚結界陣</text>
+
+  <polygon points="200,649 207,661 193,661" fill="#f59e0b" />
+  <text x="215" y="659" fill="#e2e8f0" font-size="10" font-family="sans-serif">ゲリラ迎撃点</text>
+
+  <rect x="310" y="650" width="14" height="10" fill="#334155" stroke="#cbd5e1" stroke-width="1" />
+  <text x="330" y="659" fill="#e2e8f0" font-size="10" font-family="sans-serif">煙幕回廊</text>
+
+  <line x1="410" y1="655" x2="430" y2="655" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4,2" />
+  <text x="435" y="659" fill="#e2e8f0" font-size="10" font-family="sans-serif">結界ゲート（侵入遮断）</text>
+
+  <line x1="590" y1="655" x2="610" y2="655" stroke="#a855f7" stroke-width="2" stroke-dasharray="3,3" />
+  <text x="615" y="659" fill="#e2e8f0" font-size="10" font-family="sans-serif">地下送還水脈（霊的還流）</text>
+</svg>

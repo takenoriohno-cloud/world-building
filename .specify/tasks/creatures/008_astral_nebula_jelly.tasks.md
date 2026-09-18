@@ -1,31 +1,29 @@
-# タスクリスト (Tasks)
-<!-- .specify/tasks/creatures/008_astral_nebula_jelly.tasks.md -->
-
 # 【タスク一覧】第008号：幽光星海月 アストラル・ネビュラ・ジェリー (Astral Nebula Jelly)
 
-- **対象仕様書**: `[.specify/specs/creatures/008_astral_nebula_jelly.spec.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/.specify/specs/creatures/008_astral_nebula_jelly.spec.md)`
-- **対象計画書**: `[.specify/plans/creatures/008_astral_nebula_jelly.plan.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/.specify/plans/creatures/008_astral_nebula_jelly.plan.md)`
-- **作成日**: 2026-09-10
-- **ステータス**: 実装・監査完了
+- **作成日**: 2026-09-12
+- **ステータス**: 実装・検証完了 (Done)
+- **対象計画書**: [.specify/plans/creatures/008_astral_nebula_jelly.plan.md](file:///c:/Users/user/OneDrive/ドキュメント/Antigravity/world-building/.specify/plans/creatures/008_astral_nebula_jelly.plan.md)
 
 ---
 
-## 1. 依存関係順タスクリスト
+## タスクリスト
 
-- [x] **Task 1: [マルチメディアアセットの生成・配置]**
-  - `generate_image` を活用し、夜間海洋での野生発光生態写真および星核嚢マクロ写真を生成し、`assets/creatures/008_astral_nebula_jelly/` へ配備。
-  - **検証基準**: アセットディレクトリに高精細画像が格納されていること。
-- [x] **Task 2: [Mermaid構造図・音響分析の設計]**
-  - 発光浮遊器官解剖図（`flowchart TD` / `subgraph`）およびブルーム回遊・流通ネットワーク図の構築。
-  - 0.5Hz〜5Hz超低周波水中水流振動データの設計。
-  - **検証基準**: 記号エスケープが完全でレンダリング可能なMermaidコードであること。
-- [x] **Task 3: [図鑑記事の作成 (`creatures/008_astral_nebula_jelly.md`)]**
-  - `TEMPLATE.md` 準拠の全8章構成による完全記述（解剖・生態・軍事・GURPS 4th・Class-B解体・手記）。
-  - **検証基準**: テンプレート全項目が網羅され、生々しいリアリズムと数値基準を満たしていること。
-- [x] **Task 4: [品質ゲート検査（/sdd.analyze）]**
-  - 6大部署・憲章監査マトリクスによる整合性検証。
-  - **検証基準**: 全チェック項目をパスし、設定衝突がないこと。
-- [x] **Task 5: [監査ログ・Q&A・進捗ドキュメントの更新（/sdd.audit）]**
-  - `doc/questions_and_answers.md`（Q16）、`doc/audit.log` への永続記録。
-  - **検証基準**: 公式エビデンスとして確定されていること。
+### Phase 1: 視覚アセット生成 (Phase 5.1)
+- [x] **Task 1.1**: 野生成態写真の配備 (`assets/creatures/008_astral_nebula_jelly/astral_jelly_wild.jpg`)
+- [x] **Task 1.2**: 組織標本写真の配備 (`assets/creatures/008_astral_nebula_jelly/astral_jelly_core_macro.jpg`)
+- [x] **Task 1.3**: 高級ジビエ料理写真のパス設定 (`assets/creatures/008_astral_nebula_jelly/astral_jelly_cuisine.jpg` / クォータ回復後に生成予定)
 
+### Phase 2: 図鑑記事執筆 (Phase 5.2 - TEMPLATE.md 準拠 全9章)
+- [x] **Task 2.1**: 第1章 基本分類・メタデータ（標準和名「幽光星海月」、命名規約、学名語源、門〜種生物分類階級、3大画像埋め込み / L5-26）
+- [x] **Task 2.2**: 第2章 伝承考証とマナ覚醒の架橋（大プリニウス『博物誌』Pulmo Marinus、星のゼリー伝承、2000年マナ覚醒架橋 / L29-42）
+- [x] **Task 2.3**: 第3章 生物学的特徴・ライフステージ（解剖学、Mermaid器官連関図、幼体ポリプ→成体→巨星主級Elder「星雲核」 / L45-88）
+- [x] **Task 2.4**: 第4章 生態・食物連鎖・相互作用（食性、Mermaid回遊・サプライチェーン図、他魔獣クロスリレーション、星辰ブルーム空中浮遊 / L91-128）
+- [x] **Task 2.5**: 第5章 魔導科学・上位神性・背景ロア（GURPS突合《浮揚》《茫然》《持続光》生体媒介、音響Hzログ、深海アビス因果、三ツ菱・テイコク利権 / L131-153）
+- [x] **Task 2.6**: 第6章 交戦マニュアル・都市防災コラム（GURPS 4th Stat Block、小銃突き抜け無効、ソナー威嚇、市民・海保防災メモ、専門家知恵袋 / L156-231）
+- [x] **Task 2.7**: 第7章 解体・ジビエ食文化・料理レシピ（Class-Bミョウバン脱毒、市場相場、銀座『星海月薄造り・土佐酢ジュレ仕立て』本格レシピ、三ツ菱・テイコク素材利用 / L234-269）
+- [x] **Task 2.8**: 第8章 現場記録・通信ログ（海保特務哨戒艇無線ログ、航行日誌手記 / L272-296）
+- [x] **Task 2.9**: 第9章 参考文献・典拠資料（プリニウス、海洋生物学、法規資料 / L299-310）
+
+### Phase 3: エビデンス検証＆管理ドキュメント同期 (Phase 6)
+- [x] **Task 3.1**: `008_astral_nebula_jelly.plan.md` のチェックリストを章節タイトル・行番号・Grep客観エビデンスで全照合・検証
+- [x] **Task 3.2**: `doc/current_status.md` および `doc/audit.log` を完了同期

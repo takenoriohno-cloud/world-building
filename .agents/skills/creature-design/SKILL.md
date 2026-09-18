@@ -25,3 +25,16 @@ description: 現代魔獣・幻獣の生態設計、生物学的・解剖学的�
 - **Class-B (要処理種)**: 要専門免許。放血、臭腺除去、特定器官の切除手順。
 - **Class-C (汚染種)**: 食用厳禁。バイオハザード指定および廃棄プロトコル。
 - **素材採取**: 骨、牙、角、毛皮、分泌液等の工業・医療・防護装備への用途。
+
+## 4. 地理・生息域設計 ＆ QGISタクティカルマップ生成プロトコル
+- **一次野生生息地（原典発祥地）の特定**: 神話・伝承・原種生物の地理的発祥地（欧州・南米・中東・極地等）を主生息地として特定し、EPSG:3857/4326 BBOXを算出。
+- **日本国内生息・防衛線境界**: 結界都市（第1〜第3同心円）またはアウトランド魔境（奥多摩・丹沢・青木ヶ原等）との境界を定義。
+- **QGIS自動生成パイプライン実行**:
+  ```powershell
+  & "C:\Program Files\QGIS 3.44.12\bin\python-qgis-ltr.bat" engine/gis/generate_tactical_map.py `
+      --id "[ID]_[name]" --title "[和名] 生息・保護タクティカルマップ" `
+      --primary-name "[一次生息地名]" --primary-bbox="[minLon,minLat,maxLon,maxLat]" `
+      --domestic-name "[国内生息地名]" --domestic-bbox="[minLon,minLat,maxLon,maxLat]" `
+      --output "assets/creatures/[ID]_[name]/[ID]_[name]_range_map.png"
+  ```
+- **Gate 2突合義務**: 実装計画書（Plan）のチェックリストおよび専門部署マトリックスにおいて、上記生成タスクの定義と出力ファイル（容量>100KB）の実在突合チェックを必ず実施すること。

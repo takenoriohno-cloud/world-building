@@ -1,0 +1,76 @@
+{
+  "type": "FeatureCollection",
+  "name": "etna_habitat",
+  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ETNA-CORE-01",
+        "name": "エトナ第2火口 原生溶岩湖 (Etna Crater 2 Primary Magma Lake)",
+        "zone_type": "Primary Habitat Core",
+        "mana_density_mU_m3": 240,
+        "temperature_celsius": 1100,
+        "depth_meters": 45,
+        "classification": "Class-B Restricted",
+        "dominant_species": "Salamandra vulcanica (Elder Alpha SM +3)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [14.992, 37.751],
+            [15.005, 37.755],
+            [15.012, 37.748],
+            [15.008, 37.742],
+            [14.995, 37.744],
+            [14.992, 37.751]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ETNA-MANA-HALO",
+        "name": "エトナ火霊マナ共鳴円 (Etna Fire Mana Resonance Field)",
+        "zone_type": "Mana Anomaly Halo",
+        "mana_density_mU_m3": 160,
+        "temperature_celsius": 650,
+        "classification": "Hazardous Mana Zone"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [14.950, 37.770],
+            [15.050, 37.770],
+            [15.070, 37.720],
+            [14.970, 37.710],
+            [14.930, 37.740],
+            [14.950, 37.770]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "VALLE-DEL-BOVE",
+        "name": "ボヴェ渓谷 溶岩流回廊 (Valle del Bove Lava Flow Channel)",
+        "zone_type": "Migration / Feeding Run",
+        "mana_density_mU_m3": 120,
+        "temperature_celsius": 850
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [15.005, 37.748],
+          [15.025, 37.738],
+          [15.045, 37.725],
+          [15.060, 37.710]
+        ]
+      }
+    }
+  ]
+}

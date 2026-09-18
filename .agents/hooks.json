@@ -1,0 +1,29 @@
+{
+  "antigravity-deterministic-guard": {
+    "enabled": true,
+    "PreToolUse": [
+      {
+        "matcher": "write_to_file|replace_file_content|multi_replace_file_content|run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -ExecutionPolicy Bypass -NoProfile -File ./engine/scripts/antigravity-pre-hook.ps1",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "write_to_file|replace_file_content|multi_replace_file_content",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -ExecutionPolicy Bypass -NoProfile -File ./engine/scripts/antigravity-post-hook.ps1",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}
