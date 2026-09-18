@@ -1,0 +1,15 @@
+{
+  "name": "@antigravity/engine",
+  "version": "0.1.0",
+  "description": "Deterministic Pipeline and Interceptor Envelope for Antigravity IDE",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --import tsx/esm tests/interceptor-pipeline.test.ts"
+  },
+  "type": "module",
+  "keywords": ["antigravity", "ide", "sdd", "interceptor", "guards"],
+  "author": "Antigravity Team",
+  "license": "MIT"
+}

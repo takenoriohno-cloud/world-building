@@ -1,0 +1,140 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis projectname="004_Magma_Salamander_Tactical_Map" version="3.34.0-Prizren">
+  <homePath path=""/>
+  <title>004 ヨウガンヒトカゲ 生息・戦術地理情報マップ (Magma Salamander Tactical Geoint)</title>
+  <autotransaction active="0"/>
+  <evaluateDefaultValues active="0"/>
+  <trust active="0"/>
+  <projectCrs>
+    <spatialrefsys nativeFormat="Wkt">
+      <wkt>PROJCRS["WGS 84 / Pseudo-Mercator",BASEGEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4326]],CONVERSION["Popular Visualisation Pseudo-Mercator",METHOD["Popular Visualisation Pseudo Mercator",ID["EPSG",1024]],PARAMETER["Latitude of natural origin",0,ANGLEUNIT["degree",0],ID["EPSG",8801]],PARAMETER["Longitude of natural origin",0,ANGLEUNIT["degree",0],ID["EPSG",8802]],PARAMETER["False easting",0,LENGTHUNIT["metre",1],ID["EPSG",8806]],PARAMETER["False northing",0,LENGTHUNIT["metre",1],ID["EPSG",8807]],ID["EPSG",3857]]</wkt>
+      <proj4>+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs</proj4>
+      <srsid>3857</srsid>
+      <srid>3857</srid>
+      <authid>EPSG:3857</authid>
+      <description>WGS 84 / Pseudo-Mercator</description>
+      <projectionacronym>merc</projectionacronym>
+      <ellipsoidacronym>EPSG:7030</ellipsoidacronym>
+      <geographicflag>false</geographicflag>
+    </spatialrefsys>
+  </projectCrs>
+  <layer-tree-group>
+    <customproperties>
+      <Option/>
+    </customproperties>
+    <layer-tree-layer id="defense_infrastructure" name="軍事・防衛インフラ拠点 (Defense Infrastructure)" source="./layers/defense_infrastructure.geojson" providerKey="ogr" expanded="1" checked="Qt::Checked"/>
+    <layer-tree-layer id="aso_habitat" name="阿蘇カルデラ 生息警戒区 (Aso Caldera Habitat)" source="./layers/aso_habitat.geojson" providerKey="ogr" expanded="1" checked="Qt::Checked"/>
+    <layer-tree-layer id="etna_habitat" name="エトナ山 原生息域・溶岩湖 (Etna Volcano Habitat)" source="./layers/etna_habitat.geojson" providerKey="ogr" expanded="1" checked="Qt::Checked"/>
+    <layer-tree-layer id="gsi_pale" name="国土地理院 淡色地図 (GSI Pale Map Japan)" source="type=xyz&amp;url=https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png&amp;zmax=18&amp;zmin=2" providerKey="wms" expanded="0" checked="Qt::Checked"/>
+    <layer-tree-layer id="osm_dark" name="OpenStreetMap Carto / Dark Base" source="type=xyz&amp;url=https://tile.openstreetmap.org/{z}/{x}/{y}.png&amp;zmax=19&amp;zmin=0" providerKey="wms" expanded="0" checked="Qt::Checked"/>
+  </layer-tree-group>
+  <projectLayers>
+    <!-- Vector Layer: Defense Infrastructure -->
+    <maplayer type="vector" id="defense_infrastructure" name="軍事・防衛インフラ拠点 (Defense Infrastructure)" geometry="Point">
+      <datasource>../layers/defense_infrastructure.geojson</datasource>
+      <keywordList><value></value></keywordList>
+      <layername>軍事・防衛インフラ拠点 (Defense Infrastructure)</layername>
+      <srs>
+        <spatialrefsys nativeFormat="Wkt">
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+        </spatialrefsys>
+      </srs>
+      <renderer-v2 type="singleSymbol" symbollevels="0" forceraster="0">
+        <symbols>
+          <symbol type="marker" name="0" alpha="1" clip_to_extent="1">
+            <layer class="SimpleMarker" locked="0" pass="0">
+              <prop k="color" v="0,210,255,255"/>
+              <prop k="name" v="circle"/>
+              <prop k="outline_color" v="255,255,255,255"/>
+              <prop k="outline_width" v="0.6"/>
+              <prop k="size" v="4"/>
+            </layer>
+          </symbol>
+        </symbols>
+      </renderer-v2>
+    </maplayer>
+
+    <!-- Vector Layer: Aso Habitat -->
+    <maplayer type="vector" id="aso_habitat" name="阿蘇カルデラ 生息警戒区 (Aso Caldera Habitat)" geometry="Polygon">
+      <datasource>../layers/aso_habitat.geojson</datasource>
+      <keywordList><value></value></keywordList>
+      <layername>阿蘇カルデラ 生息警戒区 (Aso Caldera Habitat)</layername>
+      <srs>
+        <spatialrefsys nativeFormat="Wkt">
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+        </spatialrefsys>
+      </srs>
+      <renderer-v2 type="singleSymbol" symbollevels="0" forceraster="0">
+        <symbols>
+          <symbol type="fill" name="0" alpha="0.6" clip_to_extent="1">
+            <layer class="SimpleFill" locked="0" pass="0">
+              <prop k="color" v="255,0,110,120"/>
+              <prop k="outline_color" v="255,0,110,255"/>
+              <prop k="outline_style" v="dash"/>
+              <prop k="outline_width" v="0.8"/>
+            </layer>
+          </symbol>
+        </symbols>
+      </renderer-v2>
+    </maplayer>
+
+    <!-- Vector Layer: Etna Habitat -->
+    <maplayer type="vector" id="etna_habitat" name="エトナ山 原生息域・溶岩湖 (Etna Volcano Habitat)" geometry="Polygon">
+      <datasource>../layers/etna_habitat.geojson</datasource>
+      <keywordList><value></value></keywordList>
+      <layername>エトナ山 原生息域・溶岩湖 (Etna Volcano Habitat)</layername>
+      <srs>
+        <spatialrefsys nativeFormat="Wkt">
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+        </spatialrefsys>
+      </srs>
+      <renderer-v2 type="singleSymbol" symbollevels="0" forceraster="0">
+        <symbols>
+          <symbol type="fill" name="0" alpha="0.6" clip_to_extent="1">
+            <layer class="SimpleFill" locked="0" pass="0">
+              <prop k="color" v="255,107,43,140"/>
+              <prop k="outline_color" v="255,107,43,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="1.0"/>
+            </layer>
+          </symbol>
+        </symbols>
+      </renderer-v2>
+    </maplayer>
+
+    <!-- Raster Layer: GSI Pale Map -->
+    <maplayer type="raster" id="gsi_pale" name="国土地理院 淡色地図 (GSI Pale Map Japan)">
+      <datasource>type=xyz&amp;url=https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png&amp;zmax=18&amp;zmin=2</datasource>
+      <layername>国土地理院 淡色地図 (GSI Pale Map Japan)</layername>
+      <provider>wms</provider>
+    </maplayer>
+
+    <!-- Raster Layer: OSM Map -->
+    <maplayer type="raster" id="osm_dark" name="OpenStreetMap Carto / Dark Base">
+      <datasource>type=xyz&amp;url=https://tile.openstreetmap.org/{z}/{x}/{y}.png&amp;zmax=19&amp;zmin=0</datasource>
+      <layername>OpenStreetMap Carto / Dark Base</layername>
+      <provider>wms</provider>
+    </maplayer>
+  </projectLayers>
+
+  <!-- Layouts / Print Layout Definition -->
+  <Layouts>
+    <Layout name="Magma_Salamander_Tactical_Geoint" units="mm" worldFileMap="">
+      <Snapper snapToGuides="1" snapToItems="1" snapToGrid="0" tolerance="5"/>
+      <Grid resUnits="mm" offsetY="0" offsetX="0" resolution="10" offsetUnits="mm"/>
+      <PageCollection>
+        <symbol type="fill" name="" alpha="1" clip_to_extent="1">
+          <layer class="SimpleFill" locked="0" pass="0">
+            <prop k="color" v="10,14,20,255"/>
+          </layer>
+        </symbol>
+        <LayoutItem position="0,0,mm" size="600,350,mm" frame="false" type="65638" itemRotation="0" visibility="1">
+          <pageProperties pageSize="Custom" orientation="1"/>
+        </LayoutItem>
+      </PageCollection>
+    </Layout>
+  </Layouts>
+</qgis>

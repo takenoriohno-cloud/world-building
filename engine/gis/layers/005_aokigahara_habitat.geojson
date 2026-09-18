@@ -1,0 +1,90 @@
+{
+  "type": "FeatureCollection",
+  "name": "005_aokigahara_habitat",
+  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "AOKI-CORE-01",
+        "name": "青木ヶ原樹海深部 原始ヒノキゴケ溶岩洞穴保護区",
+        "region": "Yamanashi, Japan",
+        "type": "Domestic Sanctuary Core",
+        "mana_density_mU_m3": 190,
+        "humidity_percent": 96,
+        "status": "Ministry of Environment Strict Sanctuary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [138.620, 35.485],
+            [138.665, 35.480],
+            [138.670, 35.450],
+            [138.630, 35.440],
+            [138.610, 35.465],
+            [138.620, 35.485]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "AOKI-BUFFER-02",
+        "name": "富士五湖（西湖・精進湖・本栖湖）朝霧回廊外縁区",
+        "region": "Yamanashi, Japan",
+        "type": "Lake Mist Buffer",
+        "status": "Special Natural Monument Zone"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [138.580, 35.510],
+            [138.700, 35.510],
+            [138.710, 35.420],
+            [138.560, 35.420],
+            [138.580, 35.510]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "POI-FUGAKU-CAVE",
+        "name": "富岳風穴・鳴沢氷穴 霊水湧出地",
+        "type": "Subterranean Ice Cave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.653, 35.475]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "POI-SAIKO",
+        "name": "西湖（サイコ）水霊マナ鏡面",
+        "type": "Fuji Five Lakes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.692, 35.500]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "POI-TEIKOKU-POST",
+        "name": "テイコク製薬・富士浅間生薬観測ステーション",
+        "type": "Corporate Research Post"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.625, 35.495]
+      }
+    }
+  ]
+}
