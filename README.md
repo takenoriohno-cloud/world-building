@@ -126,6 +126,8 @@ world-building/
 | **015** | [**棘甲鎧蛇** (トゲヨロイヘビ)](creatures/015_spined_armored_viper.md)<br>*Acanthoserpens echinatus* | TL II | Class-B | 奥多摩・丹沢カルスト岩石林。チタンケイ素逆棘装甲（DR 7）・棘射出・薬膳鍋。 |
 | **016** | [**白霧梟** (シラキリフクロウ)](creatures/016_shirakiri_owl.md)<br>*Strix cryophilus* | TL I | Class-A | 奥多摩鍾乳洞冷気林。0dB無音滑空・サーマル隠蔽・《瞬間凍結》トゲヘビ天敵・炭火串焼き。 |
 | **017** | [**白霊千鳥** (カラドリウス)](creatures/017_caladrius.md)<br>*Charadrius caladrius* | TL I | Class-B | 地中海サントリーニ島等（外来輸入）。病魔吸引・太陽光昇華代謝・白霊砂再生薬・薬膳澄まし仕立て。 |
+| **018** | [**影魚** (カゲウオ)](creatures/018_shadow_fish.md)<br>*Umbrichthys tokyoensis* | TL I〜II | Class-C | 東京湾岸スラム運河。二次元影化潜伏・精神冷気・生体光ファイバー素材・完全食用禁止汚染種。 |
+| **019** | [**モリウツシカメレオン** (森映カメレオン)](creatures/019_forest_mirage_chameleon.md)<br>*Furcifer gigantophasma* | TL III | Class-B | マダガスカル熱帯雨林（国内メガフロート隔離）。全長2m超・光屈折能動迷彩・サーマル隠蔽・超音速筋肉舌・極上白身ロースト。 |
 
 
 ---

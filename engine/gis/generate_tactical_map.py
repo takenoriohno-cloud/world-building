@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*-
 """
-QGIS Automated Tactical GEOINT Engine (SDD Pipeline)
-Generates high-precision, 2-panel tactical surveillance maps (EPSG:3857)
+QGIS Automated Tactical GEOINT Engine (Offline Render Mode)
+Renders high-precision, 2-panel tactical surveillance maps (EPSG:3857)
 Panel A: Primary Wildlife Habitat (Mythological Origin / Overseas Primary Zone)
 Panel B: Domestic Containment / Fortified Outland Zone (Japan Model)
 
-Features organic eco-contour dual-zone polygons (Core Sanctuary + Buffer Range)
-with smooth Bézier geometry modeling real-world wildlife distribution.
+Features:
+- Consumes pre-fetched local high-resolution CartoDB / OSM basemap rasters
+- Completely isolated from external network (BypassSandbox: false compliant)
+- Organic eco-contour dual-zone polygons (Core Sanctuary + Buffer Range)
+- Tactical dark HUD styling with glowing overlays
 """
 
 import sys
@@ -15,35 +18,41 @@ import math
 import argparse
 import importlib
 
+# Mechanical Sandbox Security Guardrail:
+# Ensure external network is 100% CUT OFF before initiating offline tactical render
+try:
+    from assert_network_isolated import check_isolation_boolean
+except ImportError:
+    # If run from root directory
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from assert_network_isolated import check_isolation_boolean
+
 def parse_args():
-    parser = argparse.ArgumentParser(description="QGIS Tactical Map Automated Renderer")
-    parser.add_argument("--id", required=True, help="Creature ID (e.g. 006_carbuncle)")
-    parser.add_argument("--title", required=True, help="Map Title Japanese (e.g. ベニビタイオポッサム 生息・保護タクティカルマップ)")
-    parser.add_argument("--primary-name", required=True, help="Primary Habitat Name (e.g. 南米ギアナ高地・ロライマ山塊)")
-    parser.add_argument("--primary-bbox", required=True, help="minLon,minLat,maxLon,maxLat (e.g. -61.0,5.0,-60.5,5.4)")
-    parser.add_argument("--domestic-name", required=True, help="Domestic Zone Name (e.g. 奥多摩・丹沢山系特別保護区)")
-    parser.add_argument("--domestic-bbox", required=True, help="minLon,minLat,maxLon,maxLat (e.g. 138.9,35.6,139.3,35.9)")
+    parser = argparse.ArgumentParser(description="QGIS Tactical Map Automated Offline Renderer")
+    parser.add_argument("--id", required=True, help="Creature ID (e.g. 019_forest_mirage_chameleon)")
+    parser.add_argument("--title", required=True, help="Map Title Japanese")
+    parser.add_argument("--primary-name", required=True, help="Primary Habitat Name")
+    parser.add_argument("--primary-bbox", required=True, help="minLon,minLat,maxLon,maxLat")
+    parser.add_argument("--domestic-name", required=True, help="Domestic Zone Name")
+    parser.add_argument("--domestic-bbox", required=True, help="minLon,minLat,maxLon,maxLat")
+    parser.add_argument("--tile-dir", required=True, help="Directory containing pre-fetched basemap tiles")
     parser.add_argument("--output", required=True, help="Output PNG path")
-    parser.add_argument("--mana-freq", default="520nm / 180 mU/m³", help="Mana Resonance Frequency & Density")
-    parser.add_argument("--threat-level", default="Threat Level: I〜II", help="Threat Level string")
+    parser.add_argument("--mana-freq", default="490-530nm / 220 mU/m³", help="Mana Resonance Frequency")
+    parser.add_argument("--threat-level", default="Threat Level: III", help="Threat Level string")
     return parser.parse_args()
 
 def create_organic_geometries(qgis_core, rect, seed_offset=0.0):
-    """
-    Generates natural, organic eco-contour dual-zone polygons (Outer Buffer & Inner Core)
-    using harmonic wave modulation and Bézier smoothing instead of artificial rectangles.
-    """
     QgsPointXY = getattr(qgis_core, "QgsPointXY")
     QgsGeometry = getattr(qgis_core, "QgsGeometry")
 
     cx = (rect.xMinimum() + rect.xMaximum()) / 2.0
     cy = (rect.yMinimum() + rect.yMaximum()) / 2.0
-    rx = rect.width() / 2.0 * 0.88
-    ry = rect.height() / 2.0 * 0.88
+    rx = rect.width() / 2.0 * 0.85
+    ry = rect.height() / 2.0 * 0.85
 
     num_pts = 20
 
-    # 1. Outer Buffer Zone (Wobble ~15-25%)
+    # 1. Outer Buffer Zone
     pts_outer = []
     for i in range(num_pts):
         th = 2.0 * math.pi * i / num_pts
@@ -51,17 +60,17 @@ def create_organic_geometries(qgis_core, rect, seed_offset=0.0):
         px = cx + rx * math.cos(th) * wobble
         py = cy + ry * math.sin(th) * wobble
         pts_outer.append(QgsPointXY(px, py))
-    pts_outer.append(pts_outer[0]) # close ring
+    pts_outer.append(pts_outer[0])
 
-    # 2. Inner Core Zone (Radius ~55%, different harmonic offset)
+    # 2. Inner Core Zone
     pts_inner = []
     for i in range(num_pts):
         th = 2.0 * math.pi * i / num_pts
-        wobble = 0.55 * (1.0 + 0.20 * math.cos(3 * th + seed_offset + 0.8) + 0.12 * math.sin(4 * th + 1.2))
+        wobble = 0.52 * (1.0 + 0.20 * math.cos(3 * th + seed_offset + 0.8) + 0.12 * math.sin(4 * th + 1.2))
         px = cx + rx * math.cos(th) * wobble
         py = cy + ry * math.sin(th) * wobble
         pts_inner.append(QgsPointXY(px, py))
-    pts_inner.append(pts_inner[0]) # close ring
+    pts_inner.append(pts_inner[0])
 
     geom_outer = QgsGeometry.fromPolygonXY([pts_outer]).smooth(2, 0.25)
     geom_inner = QgsGeometry.fromPolygonXY([pts_inner]).smooth(2, 0.25)
@@ -70,6 +79,14 @@ def create_organic_geometries(qgis_core, rect, seed_offset=0.0):
 
 def render_map():
     args = parse_args()
+
+    print("\n[SECURITY AUDIT] Mechanically verifying Sandbox Network Isolation...")
+    if not check_isolation_boolean(verbose=True):
+        print("\n[CRITICAL ERROR / SECURITY BLOCK] External network connection detected!")
+        print("Tactical map rendering is strictly BLOCKED while external network is active.")
+        print("Ensure BypassSandbox is false and network port is completely closed before rendering.")
+        return False
+    print("  ✓ Sandbox network isolation confirmed. Proceeding with offline QGIS render.\n")
 
     try:
         qgis_core = importlib.import_module("qgis.core")
@@ -87,8 +104,6 @@ def render_map():
         QgsCoordinateTransform = getattr(qgis_core, "QgsCoordinateTransform")
         QgsRectangle = getattr(qgis_core, "QgsRectangle")
         QgsFeature = getattr(qgis_core, "QgsFeature")
-        QgsField = getattr(qgis_core, "QgsField")
-        QgsFields = getattr(qgis_core, "QgsFields")
         QgsVectorLayer = getattr(qgis_core, "QgsVectorLayer")
         QgsRasterLayer = getattr(qgis_core, "QgsRasterLayer")
         QgsFillSymbol = getattr(qgis_core, "QgsFillSymbol")
@@ -98,8 +113,6 @@ def render_map():
         pyqt_gui = importlib.import_module("qgis.PyQt.QtGui")
         QColor = getattr(pyqt_gui, "QColor")
         QFont = getattr(pyqt_gui, "QFont")
-        pyqt_core = importlib.import_module("qgis.PyQt.QtCore")
-        QVariant = getattr(pyqt_core, "QVariant")
     except ImportError as e:
         print(f"[ERROR] PyQGIS import failed: {e}")
         return False
@@ -120,13 +133,7 @@ def render_map():
 
     transform_4326_to_3857 = QgsCoordinateTransform(crs_4326, crs_3857, project)
 
-    # 1. Base Map (OpenStreetMap XYZ)
-    osm_url = "type=xyz&url=https://tile.openstreetmap.org/{z}/{x}/{y}.png&zmax=19&zmin=0"
-    osm_layer = QgsRasterLayer(osm_url, "OpenStreetMap Base", "wms")
-    if osm_layer.isValid():
-        project.addMapLayer(osm_layer)
-
-    # 2. Parse Bounding Boxes
+    # 1. Parse Bounding Boxes
     p_coords = [float(x.strip()) for x in args.primary_bbox.split(",")]
     d_coords = [float(x.strip()) for x in args.domestic_bbox.split(",")]
 
@@ -136,51 +143,60 @@ def render_map():
     p_rect_3857 = transform_4326_to_3857.transformBoundingBox(p_rect_4326)
     d_rect_3857 = transform_4326_to_3857.transformBoundingBox(d_rect_4326)
 
-    # 3. Dynamic Organic Habitat Layer (Memory Vector with Categories)
+    # 2. Load Pre-fetched Local Basemaps
+    basemap_p_path = os.path.join(args.tile_dir, f"{args.id}_basemap_panel_a.png")
+    basemap_d_path = os.path.join(args.tile_dir, f"{args.id}_basemap_panel_b.png")
+
+    raster_p = None
+    raster_d = None
+
+    if os.path.exists(basemap_p_path):
+        raster_p = QgsRasterLayer(basemap_p_path, "Basemap Panel A")
+        if raster_p.isValid():
+            raster_p.setCrs(crs_3857)
+            project.addMapLayer(raster_p)
+            print(f"[INFO] Successfully loaded and attached Panel A basemap raster: {basemap_p_path}")
+        else:
+            print(f"[WARN] raster_p exists but failed to validate: {basemap_p_path}")
+
+    if os.path.exists(basemap_d_path):
+        raster_d = QgsRasterLayer(basemap_d_path, "Basemap Panel B")
+        if raster_d.isValid():
+            raster_d.setCrs(crs_3857)
+            project.addMapLayer(raster_d)
+            print(f"[INFO] Successfully loaded and attached Panel B basemap raster: {basemap_d_path}")
+        else:
+            print(f"[WARN] raster_d exists but failed to validate: {basemap_d_path}")
+
+    # 3. Dynamic Organic Habitat Layer (Memory Vector)
     mem_poly = QgsVectorLayer("Polygon?crs=EPSG:3857&field=zone_type:string", "Organic Habitat Zones", "memory")
     pr_poly = mem_poly.dataProvider()
 
-    # Generate organic geometries with distinct seeds
     p_geom_outer, p_geom_inner = create_organic_geometries(qgis_core, p_rect_3857, seed_offset=1.2)
     d_geom_outer, d_geom_inner = create_organic_geometries(qgis_core, d_rect_3857, seed_offset=3.7)
 
     features = []
-    # Primary Features
-    f_p_out = QgsFeature()
-    f_p_out.setGeometry(p_geom_outer)
-    f_p_out.setAttributes(["buffer_zone"])
-    features.append(f_p_out)
-
-    f_p_in = QgsFeature()
-    f_p_in.setGeometry(p_geom_inner)
-    f_p_in.setAttributes(["core_zone"])
-    features.append(f_p_in)
-
-    # Domestic Features
-    f_d_out = QgsFeature()
-    f_d_out.setGeometry(d_geom_outer)
-    f_d_out.setAttributes(["buffer_zone"])
-    features.append(f_d_out)
-
-    f_d_in = QgsFeature()
-    f_d_in.setGeometry(d_geom_inner)
-    f_d_in.setAttributes(["core_zone"])
-    features.append(f_d_in)
+    for geom, ztype in [(p_geom_outer, "buffer_zone"), (p_geom_inner, "core_zone"),
+                        (d_geom_outer, "buffer_zone"), (d_geom_inner, "core_zone")]:
+        feat = QgsFeature()
+        feat.setGeometry(geom)
+        feat.setAttributes([ztype])
+        features.append(feat)
 
     pr_poly.addFeatures(features)
     mem_poly.updateExtents()
 
-    # Categorized Styling for Buffer vs Core
+    # Styling for Buffer vs Core (High transparency for topographic clarity)
     sym_buffer = QgsFillSymbol.createSimple({
-        "color": "0,204,255,40",           # Translucent Cyan
-        "outline_color": "0,220,255,220",  # Cyan dashed boundary
-        "outline_width": "0.7",
+        "color": "0,180,255,75",           # Translucent Cyan
+        "outline_color": "0,200,255,255",  # Vibrant Cyan Border
+        "outline_width": "1.0",
         "outline_style": "dash"
     })
     sym_core = QgsFillSymbol.createSimple({
-        "color": "0,255,180,80",           # Vibrant Emerald Green (Core Sanctuary)
-        "outline_color": "0,255,200,255",  # Sharp Glowing Border
-        "outline_width": "0.9",
+        "color": "0,200,130,95",           # Translucent Emerald Green
+        "outline_color": "0,255,160,255",  # Vibrant Green Border
+        "outline_width": "1.2",
         "outline_style": "solid"
     })
 
@@ -199,11 +215,11 @@ def render_map():
     page = layout.pageCollection().pages()[0]
     page.setPageSize(QgsLayoutSize(480, 280, QgsUnitTypes.LayoutMillimeters))
 
-    # Background: Tactical Dark
+    # Background: Tactical Dark Outer Frame
     bg_shape = QgsLayoutItemShape(layout)
     bg_shape.setShapeType(QgsLayoutItemShape.Rectangle)
     try:
-        bg_shape.symbol().setColor(QColor(12, 16, 22))
+        bg_shape.symbol().setColor(QColor(10, 15, 22))
     except Exception:
         pass
     bg_shape.attemptMove(QgsLayoutPoint(0, 0, QgsUnitTypes.LayoutMillimeters))
@@ -212,7 +228,7 @@ def render_map():
 
     # Main Header Label
     title_lbl = QgsLayoutItemLabel(layout)
-    title_lbl.setText(f"ECOLOGICAL SANCTUARY GEOINT // {args.id.upper()} [{args.title}]\n[QGIS 3.44 OFFICIAL ENGINE // OPENSTREETMAP BASE TILES + DUAL-ZONE ECO-CONTOUR VECTORS]")
+    title_lbl.setText(f"ECOLOGICAL SANCTUARY GEOINT // {args.id.upper()} [{args.title}]\n[QGIS 3.44 OFFICIAL ENGINE // GLOBAL TERRAIN SHADED RELIEF + DUAL-ZONE ECO-CONTOUR VECTORS]")
     try:
         title_lbl.setFont(QFont("Arial", 14, QFont.Bold))
     except Exception:
@@ -222,7 +238,7 @@ def render_map():
     title_lbl.attemptResize(QgsLayoutSize(450, 22, QgsUnitTypes.LayoutMillimeters))
     layout.addLayoutItem(title_lbl)
 
-    # Panel A Label: Primary Habitat (Left)
+    # Panel A Label
     lbl_a = QgsLayoutItemLabel(layout)
     lbl_a.setText(f"PANEL A: PRIMARY NATURAL HABITAT - {args.primary_name}\nCOORDS BBOX [{args.primary_bbox}] // {args.threat_level} // MANA: {args.mana_freq}\n[GREEN: 高密度繁殖コア域 / CYAN: 広域回遊バッファー帯]")
     try:
@@ -234,9 +250,9 @@ def render_map():
     lbl_a.attemptResize(QgsLayoutSize(220, 14, QgsUnitTypes.LayoutMillimeters))
     layout.addLayoutItem(lbl_a)
 
-    # Panel B Label: Domestic Zone (Right)
+    # Panel B Label
     lbl_b = QgsLayoutItemLabel(layout)
-    lbl_b.setText(f"PANEL B: DOMESTIC ZONE - {args.domestic_name}\nCOORDS BBOX [{args.domestic_bbox}] // 多層結界防衛網＆アウトランド警戒回廊\n[GREEN: 国内保護コア域 / CYAN: 監視網バッファー帯]")
+    lbl_b.setText(f"PANEL B: DOMESTIC CONTAINMENT - {args.domestic_name}\nCOORDS BBOX [{args.domestic_bbox}] // 多層結界防衛網＆メガコーポ研究ドーム\n[GREEN: 国内隔離保護コア域 / CYAN: 警戒監視バッファー帯]")
     try:
         lbl_b.setFont(QFont("Arial", 9, QFont.Bold))
     except Exception:
@@ -251,10 +267,13 @@ def render_map():
     map1.attemptMove(QgsLayoutPoint(15, 42, QgsUnitTypes.LayoutMillimeters))
     map1.attemptResize(QgsLayoutSize(220, 225, QgsUnitTypes.LayoutMillimeters))
     map1.setCrs(crs_3857)
-    map1.setExtent(p_rect_3857.buffered(p_rect_3857.width() * 0.18))
-    if osm_layer.isValid() and mem_poly.isValid():
-        map1.setLayers([mem_poly, osm_layer])
-        map1.setKeepLayerSet(True)
+    map1.setExtent(p_rect_3857.buffered(p_rect_3857.width() * 0.15))
+    map1.setBackgroundColor(QColor(230, 235, 240))
+    layers_1 = [mem_poly]
+    if raster_p and raster_p.isValid():
+        layers_1.append(raster_p)
+    map1.setLayers(layers_1)
+    map1.setKeepLayerSet(True)
     map1.setFrameEnabled(True)
     layout.addLayoutItem(map1)
 
@@ -263,10 +282,13 @@ def render_map():
     map2.attemptMove(QgsLayoutPoint(245, 42, QgsUnitTypes.LayoutMillimeters))
     map2.attemptResize(QgsLayoutSize(220, 225, QgsUnitTypes.LayoutMillimeters))
     map2.setCrs(crs_3857)
-    map2.setExtent(d_rect_3857.buffered(d_rect_3857.width() * 0.18))
-    if osm_layer.isValid() and mem_poly.isValid():
-        map2.setLayers([mem_poly, osm_layer])
-        map2.setKeepLayerSet(True)
+    map2.setExtent(d_rect_3857.buffered(d_rect_3857.width() * 0.15))
+    map2.setBackgroundColor(QColor(230, 235, 240))
+    layers_2 = [mem_poly]
+    if raster_d and raster_d.isValid():
+        layers_2.append(raster_d)
+    map2.setLayers(layers_2)
+    map2.setKeepLayerSet(True)
     map2.setFrameEnabled(True)
     layout.addLayoutItem(map2)
 
