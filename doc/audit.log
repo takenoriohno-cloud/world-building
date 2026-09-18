@@ -1079,3 +1079,15 @@
      - Seesaa Wiki・・UC-JP・峨・蜈ｨ23邉ｻ邨ｱ繧､繝ｳ繝・ャ繧ｯ繧ｹ縺翫ｈ縺ｳ蜷・測譁・Μ繝ｳ繧ｯ蜈郁ｩｳ邏ｰ繝壹・繧ｸ繧貞ｮ悟・襍ｰ譟ｻ縲・     - 蜷郁ｨ・0MB雜・・1,000遞ｮ莉･荳翫・蜻ｪ譁・ｩｳ邏ｰ繝・・繧ｿ・郁ｩ蜚ｱ譎る俣縲∵ｶ郁ｲｻ縲∵戟邯壽凾髢薙∝燕謠先擅莉ｶ縲∝柑譫懆ｩｳ邏ｰ繝・く繧ｹ繝医・ｭ泌喧繝・・繧ｿ・峨ｒscratch/spells_cache/縺ｫ繧ｭ繝｣繝・す繝･菫晏ｭ伜ｮ御ｺ・・  2. **鬮倩ｦ乗ｼMarkdown荳諡ｬ逕滓・・・ヮ繧､繧ｺ遐皮｣ｨ・・ngine/scripts/batch_generate_markdown.py & polish_all_summaries.py・・*:
      - world/magic/spells/*.md 縺ｮ蜈ｨ繝輔ぃ繧､繝ｫ繧呈眠隕乗ｼ縺ｫ蜀咲ｷｨ謌撰ｼ・       - 鬮倥さ繝ｳ繝医Λ繧ｹ繝井ｻ墓ｧ弄ermaid蜑肴署譚｡莉ｶ繝・Μ繝ｼ・医ム繝ｼ繧ｯ繧ｹ繝ｬ繝ｼ繝郁レ譎ｯﾃ鈴ｮｮ譏弱す繧｢繝ｳ譫ﾃ礼ｴ皮區譁・ｭ暦ｼ峨ｒ讓呎ｺ夜・蛯吶・       - 蝓ｺ譛ｬ蜻ｪ譁・・ｭ泌ｰ主・蝎ｨ諡｡蠑ｵ・・AS/MDS・峨∵律蟶ｸ繝ｻ邁｡蜊伜測譁・ｼ・he Least of Spells・峨ｒ豁｣遒ｺ縺ｫ蛻・｡槭・       - 繝・・繝悶Ν蜉ｹ譫懈ｦりｦ√°繧姥iki蜀・Κ繝ｪ繝ｳ繧ｯ險俶ｳ輔ｄ荳崎ｦ√↑繝壹・繧ｸ逡ｪ蜿ｷ遲峨・繝弱う繧ｺ繝・く繧ｹ繝医ｒ螳悟・髯､蜴ｻ縺励∫ｴ皮ｲ九↑蜉ｹ譫懈枚縺ｮ縺ｿ繧呈歓蜃ｺ繝ｻ遐皮｣ｨ縲・       - 2026蟷ｴ迴ｾ莉｣謌ｦ陦難ｼ郁・陦幃嚏繝ｻ豕募濤陦梧ｩ滄未繝ｻPMC・峨√Γ繧ｬ繧ｳ繝ｼ繝晉音險ｱ迢ｬ蜊縲∝嵜髫幃ｭ泌ｰ主鵠螳夲ｼ・R3/CR4・峨・閠・ｨｼ繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ繧貞・邉ｻ邨ｱ縺ｫ螳悟・謨ｴ蛯吶・  3. **邂｡逅・ラ繧ｭ繝･繝｡繝ｳ繝亥酔譛・*:
      - doc/current_status.md 縺ｮ蜻ｪ譁・い繝ｼ繧ｫ繧､繝冶｡後ｒ譖ｴ譁ｰ・亥・28邉ｻ邨ｱ繝ｻ繝輔ぃ繧､繝ｫ縲・,000遞ｮ雜・ｮ悟・邯ｲ鄒・・蜀咲ｷｨ謌仙ｮ御ｺ・ｼ峨・- **繧ｹ繝・・繧ｿ繧ｹ**: **蜈ｨ蜻ｪ譁・い繝ｼ繧ｫ繧､繝門ｮ悟・蜀咲ｷｨ謌仙ｮ御ｺ・(Done)**
+### 78. 【2026-09-17】世界5大列強巨竜 不可侵史 AIDLC Inceptionパイプライン検証・正史統合完了
+- **ユーザー要求**:
+  - 黄金竜ロフヴィル（欧州 / サエデルCEO）、羽蛇神竜ケツァルコアトル（北米 / アズテク）、崑崙の祖龍 燭九陰（中国 / 国家地脈局）、古代氷結龍ロフロス（ロシア / ツングースカ）、深海皇蒼海竜リヴァイアサン（太平洋 / マリアナ海溝）、白山天龍（日本 / シラヤマ協定）の6大巨竜を踏まえ、AIDLCパイプライン（requirements, personas, stories）を用いて独立検証、正史の肉付けを進める。
+- **実行内容**:
+  1. world/history/stories/great_dragons/requirements.md（TRG-01〜06, HFR-01〜06, HNFR-01〜04）策定。
+  2. world/history/stories/great_dragons/personas.md（PER-01〜06）策定。
+  3. world/history/stories/great_dragons/stories.md（STO-01〜06）策定（Given-When-Then, Mermaid, INVEST判定）。
+  4. 5専門部署（陣内、クリスティナ、鷹司、蓮見、ゼクスト）による独立敵対的レビュー書（review_*.md）の作成（全READY判定、Checkable Evidence完備）。
+  5. engine/history/verify_history_pipeline.py による三者突合自動検証の実行（100% PASS）。
+  6. world/history/stories/great_dragons/approval.json の発行。
+  7. world/history.md（年代記および第6章）への正史公式統合と doc/current_status.md の更新。
+- **ステータス**: **完了 (Done) - AIDLC Inception Phase Gate 100% PASS**

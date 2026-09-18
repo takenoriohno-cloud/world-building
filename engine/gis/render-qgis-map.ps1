@@ -1,25 +1,32 @@
-<#
-.SYNOPSIS
-    QGIS Automated Tactical Map Rendering Pipeline
-    Auto-detects QGIS / OSGeo4W installation and executes PyQGIS export,
-    or falls back to built-in high-precision GeoJSON telemetry renderer.
-#>
+param(
+    [string]$Id = "006_carbuncle",
+    [string]$Title = "Carbuncle Tactical Map",
+    [string]$PrimaryName = "Guiana Highlands",
+    [string]$PrimaryBbox = "-61.0,5.0,-60.6,5.3",
+    [string]$DomesticName = "Okutama Sanctuary",
+    [string]$DomesticBbox = "138.9,35.6,139.3,35.9",
+    [string]$Output = ""
+)
 
 $ErrorActionPreference = "Continue"
 
 $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-$projectDir = Join-Path $scriptDir "project"
-$layersDir = Join-Path $scriptDir "layers"
-$qgsFile = Join-Path $projectDir "magma_salamander_tactical.qgs"
-$outputPng = Join-Path $scriptDir "..\..\assets\creatures\004_magma_salamander\004_magma_salamander_range_map.png"
-$outputPng = [System.IO.Path]::GetFullPath($outputPng)
+
+if ([string]::IsNullOrEmpty($Output)) {
+    $Output = Join-Path $scriptDir "..\..\assets\creatures\$Id\${Id}_range_map.png"
+}
+$Output = [System.IO.Path]::GetFullPath($Output)
 
 Write-Host "==========================================================" -ForegroundColor Cyan
 Write-Host "  QGIS AUTOMATED TACTICAL GEOINT ENGINE (SDD PIPELINE)    " -ForegroundColor Cyan
 Write-Host "==========================================================" -ForegroundColor Cyan
+Write-Host "Target ID:      $Id" -ForegroundColor White
+Write-Host "Title:          $Title" -ForegroundColor White
+Write-Host "Output PNG:     $Output" -ForegroundColor White
 
 # 1. Check for QGIS / OSGeo4W installations
 $qgisPyCandidates = @(
+    "C:\Program Files\QGIS 3.44.12\bin\python-qgis-ltr.bat",
     "C:\Program Files\QGIS *\bin\python-qgis-ltr.bat",
     "C:\Program Files\QGIS *\bin\python-qgis.bat",
     "C:\OSGeo4W\bin\python-qgis-ltr.bat",
@@ -39,28 +46,31 @@ if ($foundQgisPy) {
     Write-Host "[OK] QGIS Python Environment Detected: $foundQgisPy" -ForegroundColor Green
     Write-Host "     Executing PyQGIS automated render pipeline..." -ForegroundColor Yellow
 
-    $pyScript = Join-Path $scriptDir "render_qgis.py"
-    & $foundQgisPy $pyScript
+    $pyScript = Join-Path $scriptDir "generate_tactical_map.py"
+    & $foundQgisPy $pyScript `
+        --id "$Id" `
+        --title "$Title" `
+        --primary-name "$PrimaryName" `
+        --primary-bbox="$PrimaryBbox" `
+        --domestic-name "$DomesticName" `
+        --domestic-bbox="$DomesticBbox" `
+        --output "$Output"
 
-    if (Test-Path $outputPng) {
-        Write-Host "[SUCCESS] QGIS Map Rendered Successfully:" -ForegroundColor Green
-        Write-Host "          $outputPng" -ForegroundColor White
+    if (Test-Path $Output) {
+        $size = (Get-Item $Output).Length
+        Write-Host "[SUCCESS] QGIS Tactical Map Rendered Successfully:" -ForegroundColor Green
+        Write-Host "          $Output ($size bytes)" -ForegroundColor White
         exit 0
     }
 } else {
     Write-Host "[INFO] Local QGIS desktop binary not detected in standard paths." -ForegroundColor Yellow
-    Write-Host "       GeoJSON assets (.geojson) & Project file (.qgs) are ready at:" -ForegroundColor Cyan
-    Write-Host "       $qgsFile" -ForegroundColor White
-    Write-Host "       -> You can open this .qgs file directly in QGIS GUI anytime!" -ForegroundColor Gray
-    Write-Host ""
-    Write-Host "[INFO] Activating High-Precision GIS GeoJSON Telemetry Engine..." -ForegroundColor Yellow
+    Write-Host "       Falling back to high-precision DEM renderer..." -ForegroundColor Gray
 
-    # Run the integrated C# DEM + GeoJSON renderer
     $csRenderer = Join-Path $scriptDir "..\scripts\DemMapRenderer.cs"
     if (Test-Path $csRenderer) {
         Add-Type -Path $csRenderer -ReferencedAssemblies System.Drawing -ErrorAction SilentlyContinue
-        [DemMapRenderer]::Render($outputPng)
+        [DemMapRenderer]::Render($Output)
         Write-Host "[SUCCESS] Tactical Map updated with verified GIS GeoJSON coordinates:" -ForegroundColor Green
-        Write-Host "          $outputPng" -ForegroundColor White
+        Write-Host "          $Output" -ForegroundColor White
     }
 }
