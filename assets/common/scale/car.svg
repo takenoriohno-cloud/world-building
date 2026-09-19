@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="300" height="100">
+  <!-- Sedan Car Silhouette (Length: 4.5m, Height: ~1.45m, Aspect: ~3:1) -->
+  <g fill="#00d2ff" opacity="0.85">
+    <!-- Car Body -->
+    <path d="M 15 72 C 15 65, 25 58, 45 55 L 75 52 L 105 28 C 115 20, 130 18, 175 18 L 220 18 C 235 18, 245 28, 255 48 L 275 55 C 290 58, 295 65, 295 72 L 290 76 L 265 76 C 265 65, 240 65, 240 76 L 85 76 C 85 65, 60 65, 60 76 L 15 76 Z" />
+    <!-- Front Wheel -->
+    <circle cx="72" cy="76" r="14" fill="#00d2ff" />
+    <circle cx="72" cy="76" r="6" fill="#0a0f16" />
+    <!-- Rear Wheel -->
+    <circle cx="252" cy="76" r="14" fill="#00d2ff" />
+    <circle cx="252" cy="76" r="6" fill="#0a0f16" />
+  </g>
+</svg>

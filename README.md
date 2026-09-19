@@ -117,7 +117,7 @@ world-building/
 | **006** | [**紅玉小獣** (カーバンクル)](creatures/006_carbuncle.md)<br>*Carbunculus gemmifer* | TL I | Class-A | 高尾山マナ保護林。額の生体ルビー結晶による《屈折障壁》《精神沈静》。 |
 | **007** | [**陽炎巨鬣獅** (パイロ・ライオン)](creatures/007_pyro_pride_lion.md)<br>*Leo solaris* | TL III | Class-B | 東アフリカ・サバンナ。耐熱ケラチン鬣による蜃気楼迷彩とプライド包囲狩猟。 |
 | **008** | [**幽光星海月** (アストラル・ジェリー)](creatures/008_astral_nebula_jelly.md)<br>*Aurelia astronebula* | TL II | Class-B | 太平洋アビス〜東京湾。青紫燐光の星核嚢と新月夜間の海面上空中浮遊。 |
-| **009** | [**鍾乳石灰粘塊** (カルサイト・スライム)](creatures/009_calcite_cave_slime.md)<br>*Calcislimus spelunca* | TL II | Class-B | 日原鍾乳洞。方解石懸濁ゲルによる鍾乳石擬態・落下捕食・銃撃無効。 |
+| **009** | [**ショウニュウセッカイネンカイ** (鍾乳石灰粘塊 / カルサイト・スライム)](creatures/009_calcite_cave_slime.md)<br>*Limus calcarius* | TL II | Class-B | スロベニア・ポストイナ／奥多摩日原。方解石懸濁粘弾性ゲル・天井滴下捕食・キレート脱灰磨砕消化・不活性胞子建材・奥多摩特区水信玄餅。 |
 | **010** | [**砂嵐巨怪鳥** (ロック / アル・ルフ)](creatures/010_titanoroc_arabicus.md)<br>*Titanoroc arabicus* | TL IV | Class-C | 中東ハジャル山脈。翼開長30m超・ハニカム骨格・局所砂嵐を操る天災怪鳥。 |
 | **011** | [**千眼触手星雲** (アビス・ポリプ)](creatures/011_abyss_polyp.md)<br>*Abyssanima polyposa* | TL IV | Class-C | 青木ヶ原異界汚染域。虹色虚眼球による視覚精神汚染（SAN値崩壊）と位相転移。 |
 | **012** | [**樹皮小人** (ボウトラックル)](creatures/012_wood_bowtruckle.md)<br>*Dendrophasma britannicum* | TL I | Class-B | 英国古代樹林。植物節足キメラ構造・超精密木質棘爪による樹木相利共生。 |

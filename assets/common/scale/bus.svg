@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 140" width="450" height="140">
+  <!-- Transit Bus Silhouette (Length: 10.0m, Height: ~3.1m, Aspect: ~3.2:1) -->
+  <g fill="#00d2ff" opacity="0.85">
+    <!-- Bus Body Box -->
+    <path d="M 15 22 C 15 15, 22 12, 35 12 L 420 12 C 435 12, 442 18, 442 28 L 442 110 C 442 115, 438 118, 430 118 L 380 118 C 380 102, 345 102, 345 118 L 140 118 C 140 102, 105 102, 105 118 L 22 118 C 16 118, 15 112, 15 105 Z" />
+    <!-- Front Wheel -->
+    <circle cx="122" cy="118" r="18" fill="#00d2ff" />
+    <circle cx="122" cy="118" r="8" fill="#0a0f16" />
+    <!-- Rear Wheel -->
+    <circle cx="362" cy="118" r="18" fill="#00d2ff" />
+    <circle cx="362" cy="118" r="8" fill="#0a0f16" />
+  </g>
+</svg>
