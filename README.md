@@ -128,6 +128,8 @@ world-building/
 | **017** | [**白霊千鳥** (カラドリウス)](creatures/017_caladrius.md)<br>*Charadrius caladrius* | TL I | Class-B | 地中海サントリーニ島等（外来輸入）。病魔吸引・太陽光昇華代謝・白霊砂再生薬・薬膳澄まし仕立て。 |
 | **018** | [**影魚** (カゲウオ)](creatures/018_shadow_fish.md)<br>*Umbrichthys tokyoensis* | TL I〜II | Class-C | 東京湾岸スラム運河。二次元影化潜伏・精神冷気・生体光ファイバー素材・完全食用禁止汚染種。 |
 | **019** | [**モリウツシカメレオン** (森映カメレオン)](creatures/019_forest_mirage_chameleon.md)<br>*Furcifer gigantophasma* | TL III | Class-B | マダガスカル熱帯雨林（国内メガフロート隔離）。全長2m超・光屈折能動迷彩・サーマル隠蔽・超音速筋肉舌・極上白身ロースト。 |
+| **020** | [**クニヒキリュウ** (国引巨竜)](creatures/020_grand_earth_dragon.md)<br>*Titanoterradraco orogenes* | TL V | Class-C | ユーラシア中枢大断層・超大陸グレート・サーキット。全長20km・全高6,000m・背上孤立魔境・重力質量相殺場・竜語真名『グラル・ガイア』・不可侵天災指定。 |
+
 
 
 ---

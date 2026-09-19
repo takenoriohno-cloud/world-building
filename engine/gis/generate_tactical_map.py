@@ -77,6 +77,50 @@ def create_organic_geometries(qgis_core, rect, seed_offset=0.0):
 
     return geom_outer, geom_inner
 
+def create_circuit_geometries(qgis_core, crs_src, crs_dest):
+    """
+    Renders a true Continental Great Circuit (Loop Corridor) across Eurasia and the Middle East.
+    """
+    QgsPointXY = getattr(qgis_core, "QgsPointXY")
+    QgsGeometry = getattr(qgis_core, "QgsGeometry")
+    QgsCoordinateTransform = getattr(qgis_core, "QgsCoordinateTransform")
+    QgsProject = getattr(qgis_core, "QgsProject")
+
+    xform = QgsCoordinateTransform(crs_src, crs_dest, QgsProject.instance())
+
+    # Great Circuit Waypoints (Lon, Lat) across Tibet, Tien Shan, Urals, Caucasus, Levant, Arabia, Iran, Himalayas
+    circuit_pts_wgs84 = [
+        (85.0, 35.0),   # 1. チベット高原・崑崙山脈（一次コア）
+        (88.0, 43.5),   # 2. 天山山脈東部・ジュンガル盆地
+        (76.0, 45.0),   # 3. バルハシ湖・カザフステップ
+        (62.0, 50.0),   # 4. トルガイ回廊・南ウラル山脈
+        (50.0, 47.0),   # 5. カスピ海北岸・ヴォルガ低地
+        (43.0, 42.0),   # 6. コーカサス大山脈
+        (37.0, 37.0),   # 7. アナトリア東部・メソポタミア北縁
+        (36.0, 30.0),   # 8. レバント大断層・紅海地溝帯北端
+        (45.0, 24.5),   # 9. アラビア内陸霊脈
+        (55.0, 27.5),   # 10. ペルシャ湾・ホルムズ北嶺
+        (60.0, 33.0),   # 11. イラン高原・ザグロス東嶺
+        (68.0, 34.5),   # 12. ヒンドゥークシュ山脈
+        (76.0, 33.0),   # 13. カシミール・カラコルム
+        (84.0, 28.5),   # 14. ヒマラヤ中央・ネパール主嶺
+        (92.0, 31.0),   # 15. チベット東南部・横断山脈
+        (85.0, 35.0),   # 16. 崑崙・チベットへ帰還（閉塞サーキット）
+    ]
+
+    pts_3857 = []
+    for lon, lat in circuit_pts_wgs84:
+        pt = xform.transform(QgsPointXY(lon, lat))
+        pts_3857.append(pt)
+
+    line_geom = QgsGeometry.fromPolylineXY(pts_3857)
+
+    # Buffer in EPSG:3857 meters
+    geom_outer = line_geom.buffer(280000.0, 8).smooth(2, 0.25)  # 280km buffer
+    geom_inner = line_geom.buffer(120000.0, 8).smooth(2, 0.25)  # 120km core corridor
+
+    return geom_outer, geom_inner
+
 def render_map():
     args = parse_args()
 
@@ -168,45 +212,67 @@ def render_map():
         else:
             print(f"[WARN] raster_d exists but failed to validate: {basemap_d_path}")
 
-    # 3. Dynamic Organic Habitat Layer (Memory Vector)
-    mem_poly = QgsVectorLayer("Polygon?crs=EPSG:3857&field=zone_type:string", "Organic Habitat Zones", "memory")
-    pr_poly = mem_poly.dataProvider()
-
+    # 3. Dynamic Organic Habitat Layers (Separate Memory Vectors for Panel A and B)
     p_geom_outer, p_geom_inner = create_organic_geometries(qgis_core, p_rect_3857, seed_offset=1.2)
-    d_geom_outer, d_geom_inner = create_organic_geometries(qgis_core, d_rect_3857, seed_offset=3.7)
+    if "020" in args.id:
+        d_geom_outer, d_geom_inner = create_circuit_geometries(qgis_core, crs_4326, crs_3857)
+    else:
+        d_geom_outer, d_geom_inner = create_organic_geometries(qgis_core, d_rect_3857, seed_offset=3.7)
 
-    features = []
-    for geom, ztype in [(p_geom_outer, "buffer_zone"), (p_geom_inner, "core_zone"),
-                        (d_geom_outer, "buffer_zone"), (d_geom_inner, "core_zone")]:
-        feat = QgsFeature()
-        feat.setGeometry(geom)
-        feat.setAttributes([ztype])
-        features.append(feat)
+    # 3.1 Panel A Vector Layer
+    mem_poly_a = QgsVectorLayer("Polygon?crs=EPSG:3857&field=zone_type:string", "Habitat Zones Panel A", "memory")
+    pr_poly_a = mem_poly_a.dataProvider()
+    feat_a_buf = QgsFeature()
+    feat_a_buf.setGeometry(p_geom_outer)
+    feat_a_buf.setAttributes(["buffer_zone"])
+    feat_a_core = QgsFeature()
+    feat_a_core.setGeometry(p_geom_inner)
+    feat_a_core.setAttributes(["core_zone"])
+    pr_poly_a.addFeatures([feat_a_buf, feat_a_core])
+    mem_poly_a.updateExtents()
 
-    pr_poly.addFeatures(features)
-    mem_poly.updateExtents()
+    # 3.2 Panel B Vector Layer
+    mem_poly_b = QgsVectorLayer("Polygon?crs=EPSG:3857&field=zone_type:string", "Habitat Zones Panel B", "memory")
+    pr_poly_b = mem_poly_b.dataProvider()
+    feat_b_buf = QgsFeature()
+    feat_b_buf.setGeometry(d_geom_outer)
+    feat_b_buf.setAttributes(["buffer_zone"])
+    feat_b_core = QgsFeature()
+    feat_b_core.setGeometry(d_geom_inner)
+    feat_b_core.setAttributes(["core_zone"])
+    pr_poly_b.addFeatures([feat_b_buf, feat_b_core])
+    mem_poly_b.updateExtents()
 
-    # Styling for Buffer vs Core (High transparency for topographic clarity)
+    # Styling for Buffer vs Core
     sym_buffer = QgsFillSymbol.createSimple({
-        "color": "0,180,255,75",           # Translucent Cyan
-        "outline_color": "0,200,255,255",  # Vibrant Cyan Border
-        "outline_width": "1.0",
+        "color": "0,180,255,85",           # Translucent Cyan
+        "outline_color": "0,210,255,255",  # Vibrant Cyan Border
+        "outline_width": "1.2",
         "outline_style": "dash"
     })
     sym_core = QgsFillSymbol.createSimple({
-        "color": "0,200,130,95",           # Translucent Emerald Green
+        "color": "0,220,130,120",          # Translucent Emerald Green
         "outline_color": "0,255,160,255",  # Vibrant Green Border
-        "outline_width": "1.2",
+        "outline_width": "1.5",
         "outline_style": "solid"
     })
 
-    categories = [
-        QgsRendererCategory("buffer_zone", sym_buffer, "広域回遊・監視バッファー域 (Buffer Range)"),
-        QgsRendererCategory("core_zone", sym_core, "高密度マナ共鳴・繁殖コア域 (Core Sanctuary)")
+    categories_a = [
+        QgsRendererCategory("buffer_zone", sym_buffer.clone(), "広域回遊・監視バッファー域"),
+        QgsRendererCategory("core_zone", sym_core.clone(), "高密度マナ共鳴・繁殖コア域")
     ]
-    renderer = QgsCategorizedSymbolRenderer("zone_type", categories)
-    mem_poly.setRenderer(renderer)
-    project.addMapLayer(mem_poly)
+    mem_poly_a.setRenderer(QgsCategorizedSymbolRenderer("zone_type", categories_a))
+    project.addMapLayer(mem_poly_a)
+
+    buffer_b_label = "超大陸グレート・サーキット巡回域 (Great Circuit Range)" if "020" in args.id else "広域監視バッファー帯"
+    core_b_label = "一次霊脈・地殻コア回廊帯 (Primary Leyline Core)" if "020" in args.id else "国内隔離保護コア域"
+
+    categories_b = [
+        QgsRendererCategory("buffer_zone", sym_buffer.clone(), buffer_b_label),
+        QgsRendererCategory("core_zone", sym_core.clone(), core_b_label)
+    ]
+    mem_poly_b.setRenderer(QgsCategorizedSymbolRenderer("zone_type", categories_b))
+    project.addMapLayer(mem_poly_b)
 
     # 4. Print Layout Setup (480 x 280 mm)
     layout = QgsLayout(project)
@@ -252,7 +318,10 @@ def render_map():
 
     # Panel B Label
     lbl_b = QgsLayoutItemLabel(layout)
-    lbl_b.setText(f"PANEL B: DOMESTIC CONTAINMENT - {args.domestic_name}\nCOORDS BBOX [{args.domestic_bbox}] // 多層結界防衛網＆メガコーポ研究ドーム\n[GREEN: 国内隔離保護コア域 / CYAN: 警戒監視バッファー帯]")
+    if "020" in args.id or "サーキット" in args.domestic_name or "巡回" in args.domestic_name:
+        lbl_b.setText(f"PANEL B: CONTINENTAL GREAT CIRCUIT - {args.domestic_name}\nCOORDS BBOX [{args.domestic_bbox}] // 超大陸マナ・レイライン閉塞回廊帯\n[GREEN: 一次霊脈コア回廊帯 / CYAN: 超大陸グレート・サーキット巡回域]")
+    else:
+        lbl_b.setText(f"PANEL B: DOMESTIC CONTAINMENT - {args.domestic_name}\nCOORDS BBOX [{args.domestic_bbox}] // 多層結界防衛網＆メガコーポ研究ドーム\n[GREEN: 国内隔離保護コア域 / CYAN: 警戒監視バッファー帯]")
     try:
         lbl_b.setFont(QFont("Arial", 9, QFont.Bold))
     except Exception:
@@ -269,7 +338,7 @@ def render_map():
     map1.setCrs(crs_3857)
     map1.setExtent(p_rect_3857.buffered(p_rect_3857.width() * 0.15))
     map1.setBackgroundColor(QColor(230, 235, 240))
-    layers_1 = [mem_poly]
+    layers_1 = [mem_poly_a]
     if raster_p and raster_p.isValid():
         layers_1.append(raster_p)
     map1.setLayers(layers_1)
@@ -277,14 +346,14 @@ def render_map():
     map1.setFrameEnabled(True)
     layout.addLayoutItem(map1)
 
-    # --- MAP PANEL 2: Domestic Zone (Right) ---
+    # --- MAP PANEL 2: Domestic Zone / Continental Circuit (Right) ---
     map2 = QgsLayoutItemMap(layout)
     map2.attemptMove(QgsLayoutPoint(245, 42, QgsUnitTypes.LayoutMillimeters))
     map2.attemptResize(QgsLayoutSize(220, 225, QgsUnitTypes.LayoutMillimeters))
     map2.setCrs(crs_3857)
-    map2.setExtent(d_rect_3857.buffered(d_rect_3857.width() * 0.15))
+    map2.setExtent(d_rect_3857.buffered(d_rect_3857.width() * 0.05))
     map2.setBackgroundColor(QColor(230, 235, 240))
-    layers_2 = [mem_poly]
+    layers_2 = [mem_poly_b]
     if raster_d and raster_d.isValid():
         layers_2.append(raster_d)
     map2.setLayers(layers_2)
